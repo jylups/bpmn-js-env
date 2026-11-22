@@ -38,6 +38,8 @@ Run them from the workspace root:
 | `npm run build` | builds every workspace that has a `build` script |
 | `npm run lint` | lints every workspace |
 | `npm test` | runs the tests of every workspace |
+| `npm run roundtrip:fetch` | downloads the Flowable engine's BPMN models for the load-and-save report |
+| `npm run roundtrip` | runs the load-and-save report (see [roundtrip/README.md](roundtrip/README.md)) |
 
 Tests use Vitest. The moddle package runs in Node; the panel, behaviors and editor packages run in headless Chromium through Playwright. Install Playwright's Chromium once with `npx playwright install chromium`, or use an installed Google Chrome with `TEST_BROWSER_CHANNEL=chrome npm test`.
 

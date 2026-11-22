@@ -15,3 +15,7 @@ coverage/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Flowable engine models for the load-and-save report (scripts/fetch-flowable-models.sh)
+/.flowable-models/
+/roundtrip-report.*

@@ -40,6 +40,7 @@ All packages use the `@jylups/` scope: the unscoped names are taken on npm by ot
 - Flowable Work/Design-only properties come in a later phase.
 - Read `activiti:` and `camunda:` spellings where the engine accepts them; always write `flowable:`.
 - [docs/coverage.md](docs/coverage.md) tracks which package covers each extension. A pull request that adds coverage updates the rows it touches in the same change.
+- The load-and-save report ([roundtrip/README.md](roundtrip/README.md)) runs over the Flowable engine's 3,265 BPMN models in CI. A pull request that fixes a known difference removes it from `roundtrip/known-losses.json`; a new kind of difference fails CI until it is fixed or listed with its issue.
 
 ## Branches, commits and pull requests
 
