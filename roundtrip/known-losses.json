@@ -89,8 +89,8 @@
       "note": "Accepted: an xsi:type annotation (omgdc:Point) on waypoints that carries no information"
     },
     "dropped-attribute bpmn:dataObject@itemSubjectRef": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/17",
-      "note": "Flowable uses itemSubjectRef=\"xsd:string\" (and int, long, double, boolean, datetime, json) for typed data objects and properties without declaring an itemDefinition. bpmn-moddle drops it as unresolved. Needs handling in the descriptor"
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
+      "note": "Flowable uses itemSubjectRef=\"xsd:string\" (and int, long, double, boolean, datetime, json) for typed data objects and properties without declaring an itemDefinition. bpmn-moddle drops it as unresolved. Options are in #62"
     },
     "dropped-attribute bpmn:message@itemRef": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
@@ -105,8 +105,8 @@
       "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Options are in #62"
     },
     "dropped-attribute bpmn:dataInput@itemSubjectRef": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/17",
-      "note": "Flowable uses itemSubjectRef=\"xsd:string\" (and int, long, double, boolean, datetime, json) for typed data objects and properties without declaring an itemDefinition. bpmn-moddle drops it as unresolved. Needs handling in the descriptor"
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
+      "note": "Flowable uses itemSubjectRef=\"xsd:string\" (and int, long, double, boolean, datetime, json) for typed data objects and properties without declaring an itemDefinition. bpmn-moddle drops it as unresolved. Options are in #62"
     },
     "dropped-attribute bpmn:sendTask@operationRef": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
@@ -117,8 +117,8 @@
       "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
     },
     "dropped-attribute bpmn:dataOutput@itemSubjectRef": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/17",
-      "note": "Flowable uses itemSubjectRef=\"xsd:string\" (and int, long, double, boolean, datetime, json) for typed data objects and properties without declaring an itemDefinition. bpmn-moddle drops it as unresolved. Needs handling in the descriptor"
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
+      "note": "Flowable uses itemSubjectRef=\"xsd:string\" (and int, long, double, boolean, datetime, json) for typed data objects and properties without declaring an itemDefinition. bpmn-moddle drops it as unresolved. Options are in #62"
     },
     "dropped-attribute bpmn:sequenceFlow@sourceRef": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
@@ -177,8 +177,8 @@
       "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
     },
     "dropped-attribute bpmn:property@itemSubjectRef": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/17",
-      "note": "Flowable uses itemSubjectRef=\"xsd:string\" (and int, long, double, boolean, datetime, json) for typed data objects and properties without declaring an itemDefinition. bpmn-moddle drops it as unresolved. Needs handling in the descriptor"
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
+      "note": "Flowable uses itemSubjectRef=\"xsd:string\" (and int, long, double, boolean, datetime, json) for typed data objects and properties without declaring an itemDefinition. bpmn-moddle drops it as unresolved. Options are in #62"
     },
     "dropped-attribute yourco:attribute@yourco:id": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
@@ -287,6 +287,14 @@
     "added-attribute flowable:collection@delegateExpression": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/15",
       "note": "Accepted: written unprefixed, as Flowable's own exporter writes it; Flowable reads these attributes with getAttributeValue(null, ...), which ignores the namespace (FlowableCollectionParser)"
+    },
+    "dropped-attribute bpmn:sequenceFlow@skipExpression": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/17",
+      "note": "Accepted: an unprefixed skipExpression on a sequence flow (as Flowable's exporter writes it) now reads into the typed flowable:skipExpression and is written prefixed; Flowable reads it with getAttributeValue(null, ...), which ignores the namespace (SequenceFlowXMLConverter)"
+    },
+    "added-attribute bpmn:sequenceFlow@flowable:skipExpression": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/17",
+      "note": "Accepted: an unprefixed skipExpression on a sequence flow (as Flowable's exporter writes it) now reads into the typed flowable:skipExpression and is written prefixed; Flowable reads it with getAttributeValue(null, ...), which ignores the namespace (SequenceFlowXMLConverter)"
     }
   }
 }

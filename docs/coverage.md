@@ -203,11 +203,11 @@ Inventory section 10. Moddle: [#17](https://github.com/jylups/bpmn-js-env/issues
 | Extension | Kind | On | Moddle | Panel | Behaviors | Editor |
 |---|---|---|---|---|---|---|
 | `value` | element | dataObject | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
-| itemSubjectRef types (string, int, long, double, boolean, datetime, json) | attribute | dataObject | todo [#17](https://github.com/jylups/bpmn-js-env/issues/17) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
-| scope (global, processInstance) | attribute | signal | todo [#17](https://github.com/jylups/bpmn-js-env/issues/17) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
-| skipExpression (written unprefixed) | attribute | sequence flow | todo [#17](https://github.com/jylups/bpmn-js-env/issues/17) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
-| sourceDockerX/Y, targetDockerX/Y | attribute | bpmndi:BPMNEdge | todo [#17](https://github.com/jylups/bpmn-js-env/issues/17) | – |  | – |
-| `rotation` | attribute | bpmndi:BPMNLabel | todo [#17](https://github.com/jylups/bpmn-js-env/issues/17) | – |  | – |
+| itemSubjectRef types (string, int, long, double, boolean, datetime, json) | attribute | dataObject | todo [#62](https://github.com/jylups/bpmn-js-env/issues/62) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
+| scope (global, processInstance) | attribute | signal | done ([jylups/flowable-bpmn-moddle#13](https://github.com/jylups/flowable-bpmn-moddle/pull/13)) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
+| skipExpression (written unprefixed) | attribute | sequence flow | done ([jylups/flowable-bpmn-moddle#13](https://github.com/jylups/flowable-bpmn-moddle/pull/13)) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
+| sourceDockerX/Y, targetDockerX/Y | attribute | bpmndi:BPMNEdge | kept as unknown attributes (lossless; typing them renames the DI tags) | – |  | – |
+| `rotation` | attribute | bpmndi:BPMNLabel | kept as unknown attributes (lossless; typing them renames the DI tags) | – |  | – |
 
 ## Aliases and legacy forms
 
