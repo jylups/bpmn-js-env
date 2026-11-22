@@ -15,16 +15,16 @@ Inventory section 1. Moddle: [#8](https://github.com/jylups/bpmn-js-env/issues/8
 
 | Extension | Kind | On | Moddle | Panel | Behaviors | Editor |
 |---|---|---|---|---|---|---|
-| `async` | attribute | flow nodes | todo [#8](https://github.com/jylups/bpmn-js-env/issues/8) | todo [#22](https://github.com/jylups/bpmn-js-env/issues/22) |  |  |
-| `exclusive` | attribute | flow nodes | todo [#8](https://github.com/jylups/bpmn-js-env/issues/8) | todo [#22](https://github.com/jylups/bpmn-js-env/issues/22) |  |  |
-| `asyncLeave` | attribute | flow nodes | todo [#8](https://github.com/jylups/bpmn-js-env/issues/8) | todo [#22](https://github.com/jylups/bpmn-js-env/issues/22) |  |  |
-| `asyncLeaveExclusive` | attribute | flow nodes | todo [#8](https://github.com/jylups/bpmn-js-env/issues/8) | todo [#22](https://github.com/jylups/bpmn-js-env/issues/22) |  |  |
-| `failedJobRetryTimeCycle` | element | activities | todo [#8](https://github.com/jylups/bpmn-js-env/issues/8) | todo [#22](https://github.com/jylups/bpmn-js-env/issues/22) |  |  |
-| `element-name` | element | flow elements | todo [#8](https://github.com/jylups/bpmn-js-env/issues/8) | todo [#22](https://github.com/jylups/bpmn-js-env/issues/22) |  |  |
-| `jobCategory` | element | async activities, timers, external worker | todo [#8](https://github.com/jylups/bpmn-js-env/issues/8) | todo [#22](https://github.com/jylups/bpmn-js-env/issues/22) |  |  |
-| `includeInHistory` | element | flow elements | todo [#8](https://github.com/jylups/bpmn-js-env/issues/8) | todo [#22](https://github.com/jylups/bpmn-js-env/issues/22) |  |  |
-| localization (locale, name) | element | process, flow elements, data objects | todo [#8](https://github.com/jylups/bpmn-js-env/issues/8) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
-| localization › documentation | child | localization | todo [#8](https://github.com/jylups/bpmn-js-env/issues/8) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
+| `async` | attribute | flow nodes | done ([jylups/flowable-bpmn-moddle#4](https://github.com/jylups/flowable-bpmn-moddle/pull/4)) | todo [#22](https://github.com/jylups/bpmn-js-env/issues/22) |  |  |
+| `exclusive` | attribute | flow nodes | done ([jylups/flowable-bpmn-moddle#4](https://github.com/jylups/flowable-bpmn-moddle/pull/4)) | todo [#22](https://github.com/jylups/bpmn-js-env/issues/22) |  |  |
+| `asyncLeave` | attribute | flow nodes | done ([jylups/flowable-bpmn-moddle#4](https://github.com/jylups/flowable-bpmn-moddle/pull/4)) | todo [#22](https://github.com/jylups/bpmn-js-env/issues/22) |  |  |
+| `asyncLeaveExclusive` | attribute | flow nodes | done ([jylups/flowable-bpmn-moddle#4](https://github.com/jylups/flowable-bpmn-moddle/pull/4)) | todo [#22](https://github.com/jylups/bpmn-js-env/issues/22) |  |  |
+| `failedJobRetryTimeCycle` | element | activities | done ([jylups/flowable-bpmn-moddle#4](https://github.com/jylups/flowable-bpmn-moddle/pull/4)) | todo [#22](https://github.com/jylups/bpmn-js-env/issues/22) |  |  |
+| `element-name` | element | flow elements | done ([jylups/flowable-bpmn-moddle#4](https://github.com/jylups/flowable-bpmn-moddle/pull/4)) | todo [#22](https://github.com/jylups/bpmn-js-env/issues/22) |  |  |
+| `jobCategory` | element | async activities, timers, external worker | done ([jylups/flowable-bpmn-moddle#4](https://github.com/jylups/flowable-bpmn-moddle/pull/4)) | todo [#22](https://github.com/jylups/bpmn-js-env/issues/22) |  |  |
+| `includeInHistory` | element | flow elements | done ([jylups/flowable-bpmn-moddle#4](https://github.com/jylups/flowable-bpmn-moddle/pull/4)) | todo [#22](https://github.com/jylups/bpmn-js-env/issues/22) |  |  |
+| localization (locale, name) | element | process, flow elements, data objects | done ([jylups/flowable-bpmn-moddle#4](https://github.com/jylups/flowable-bpmn-moddle/pull/4)) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
+| localization › documentation | child | localization | done ([jylups/flowable-bpmn-moddle#4](https://github.com/jylups/flowable-bpmn-moddle/pull/4)) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
 
 ## Listeners, fields and scripts
 
