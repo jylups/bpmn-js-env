@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:flowable="http://flowable.org/bpmn"
+             targetNamespace="http://flowable.org/bpmn"
+             id="Definitions_flowableBasics">
+  <process id="vacationRequest" name="Vacation request" isExecutable="true"
+           flowable:candidateStarterGroups="employees">
+    <extensionElements>
+      <flowable:executionListener event="start" delegateExpression="${auditListener}" />
+    </extensionElements>
+    <startEvent id="request" name="Request submitted" flowable:initiator="employee" flowable:formKey="vacationRequestForm" />
+    <sequenceFlow id="toReview" sourceRef="request" targetRef="review" />
+    <userTask id="review" name="Review request" flowable:candidateGroups="managers" flowable:dueDate="P3D"
+              flowable:formKey="reviewForm" flowable:priority="60">
+      <extensionElements>
+        <flowable:taskListener event="create" class="org.example.NotifyManager" />
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="toDecision" sourceRef="review" targetRef="decision" />
+    <exclusiveGateway id="decision" name="Approved?" />
+    <sequenceFlow id="approvedFlow" name="yes" sourceRef="decision" targetRef="notify">
+      <conditionExpression xsi:type="tFormalExpression">${approved}</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="rejectedFlow" name="no" sourceRef="decision" targetRef="rejected" skipExpression="${skipRejection}">
+      <conditionExpression xsi:type="tFormalExpression">${!approved}</conditionExpression>
+    </sequenceFlow>
+    <serviceTask id="notify" name="Send confirmation" flowable:type="mail" flowable:async="true">
+      <extensionElements>
+        <flowable:field name="to" expression="${employeeEmail}" />
+        <flowable:field name="subject">
+          <flowable:string><![CDATA[Vacation approved]]></flowable:string>
+        </flowable:field>
+        <flowable:failedJobRetryTimeCycle>R3/PT10M</flowable:failedJobRetryTimeCycle>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="toApproved" sourceRef="notify" targetRef="approved" />
+    <endEvent id="approved" name="Approved" />
+    <endEvent id="rejected" name="Rejected" />
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_vacationRequest">
+    <bpmndi:BPMNPlane id="BPMNPlane_vacationRequest" bpmnElement="vacationRequest">
+      <bpmndi:BPMNShape id="request_di" bpmnElement="request">
+        <dc:Bounds x="152" y="182" width="36" height="36" />
+        <bpmndi:BPMNLabel><dc:Bounds x="127" y="225" width="86" height="27" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="review_di" bpmnElement="review">
+        <dc:Bounds x="250" y="160" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="decision_di" bpmnElement="decision" isMarkerVisible="true">
+        <dc:Bounds x="415" y="175" width="50" height="50" />
+        <bpmndi:BPMNLabel><dc:Bounds x="413" y="145" width="54" height="14" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="notify_di" bpmnElement="notify">
+        <dc:Bounds x="530" y="160" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="approved_di" bpmnElement="approved">
+        <dc:Bounds x="702" y="182" width="36" height="36" />
+        <bpmndi:BPMNLabel><dc:Bounds x="697" y="225" width="47" height="14" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="rejected_di" bpmnElement="rejected">
+        <dc:Bounds x="532" y="302" width="36" height="36" />
+        <bpmndi:BPMNLabel><dc:Bounds x="528" y="345" width="45" height="14" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="toReview_di" bpmnElement="toReview">
+        <di:waypoint x="188" y="200" /><di:waypoint x="250" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="toDecision_di" bpmnElement="toDecision">
+        <di:waypoint x="350" y="200" /><di:waypoint x="415" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="approvedFlow_di" bpmnElement="approvedFlow">
+        <di:waypoint x="465" y="200" /><di:waypoint x="530" y="200" />
+        <bpmndi:BPMNLabel><dc:Bounds x="489" y="182" width="18" height="14" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="rejectedFlow_di" bpmnElement="rejectedFlow">
+        <di:waypoint x="440" y="225" /><di:waypoint x="440" y="320" /><di:waypoint x="532" y="320" />
+        <bpmndi:BPMNLabel><dc:Bounds x="449" y="270" width="13" height="14" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="toApproved_di" bpmnElement="toApproved">
+        <di:waypoint x="630" y="200" /><di:waypoint x="702" y="200" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
