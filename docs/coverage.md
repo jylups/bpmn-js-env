@@ -75,22 +75,22 @@ Inventory section 4. Moddle: [#11](https://github.com/jylups/bpmn-js-env/issues/
 
 | Extension | Kind | On | Moddle | Panel | Behaviors | Editor |
 |---|---|---|---|---|---|---|
-| `assignee` | attribute | user task | todo [#11](https://github.com/jylups/bpmn-js-env/issues/11) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) | todo [#35](https://github.com/jylups/bpmn-js-env/issues/35) |  |
-| `owner` | attribute | user task | todo [#11](https://github.com/jylups/bpmn-js-env/issues/11) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) | todo [#35](https://github.com/jylups/bpmn-js-env/issues/35) |  |
-| `candidateUsers` | attribute | user task | todo [#11](https://github.com/jylups/bpmn-js-env/issues/11) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) | todo [#35](https://github.com/jylups/bpmn-js-env/issues/35) |  |
-| `candidateGroups` | attribute | user task | todo [#11](https://github.com/jylups/bpmn-js-env/issues/11) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) | todo [#35](https://github.com/jylups/bpmn-js-env/issues/35) |  |
-| `dueDate` | attribute | user task | todo [#11](https://github.com/jylups/bpmn-js-env/issues/11) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  | todo [#44](https://github.com/jylups/bpmn-js-env/issues/44) |
-| `businessCalendarName` | attribute | user task | todo [#11](https://github.com/jylups/bpmn-js-env/issues/11) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
-| `category` | attribute | user task | todo [#11](https://github.com/jylups/bpmn-js-env/issues/11) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
-| `formKey` | attribute | user task | todo [#11](https://github.com/jylups/bpmn-js-env/issues/11) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
-| `formFieldValidation` | attribute | user task | todo [#11](https://github.com/jylups/bpmn-js-env/issues/11) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
-| `sameDeployment` | attribute | user task | todo [#11](https://github.com/jylups/bpmn-js-env/issues/11) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
-| `priority` | attribute | user task | todo [#11](https://github.com/jylups/bpmn-js-env/issues/11) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
-| `extensionId` | attribute | user task | todo [#11](https://github.com/jylups/bpmn-js-env/issues/11) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
-| `skipExpression` | attribute | user task | todo [#11](https://github.com/jylups/bpmn-js-env/issues/11) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
-| `taskIdVariableName` | attribute | user task | todo [#11](https://github.com/jylups/bpmn-js-env/issues/11) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
-| `taskCompleterVariableName` | attribute | user task | todo [#11](https://github.com/jylups/bpmn-js-env/issues/11) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
-| customResource (name, resourceAssignmentExpression) | element | user task | todo [#11](https://github.com/jylups/bpmn-js-env/issues/11) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
+| `assignee` | attribute | user task | done ([jylups/flowable-bpmn-moddle#7](https://github.com/jylups/flowable-bpmn-moddle/pull/7)) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) | todo [#35](https://github.com/jylups/bpmn-js-env/issues/35) |  |
+| `owner` | attribute | user task | done ([jylups/flowable-bpmn-moddle#7](https://github.com/jylups/flowable-bpmn-moddle/pull/7)) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) | todo [#35](https://github.com/jylups/bpmn-js-env/issues/35) |  |
+| `candidateUsers` | attribute | user task | done ([jylups/flowable-bpmn-moddle#7](https://github.com/jylups/flowable-bpmn-moddle/pull/7)) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) | todo [#35](https://github.com/jylups/bpmn-js-env/issues/35) |  |
+| `candidateGroups` | attribute | user task | done ([jylups/flowable-bpmn-moddle#7](https://github.com/jylups/flowable-bpmn-moddle/pull/7)) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) | todo [#35](https://github.com/jylups/bpmn-js-env/issues/35) |  |
+| `dueDate` | attribute | user task | done ([jylups/flowable-bpmn-moddle#7](https://github.com/jylups/flowable-bpmn-moddle/pull/7)) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  | todo [#44](https://github.com/jylups/bpmn-js-env/issues/44) |
+| `businessCalendarName` | attribute | user task | done ([jylups/flowable-bpmn-moddle#7](https://github.com/jylups/flowable-bpmn-moddle/pull/7)) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
+| `category` | attribute | user task | done ([jylups/flowable-bpmn-moddle#7](https://github.com/jylups/flowable-bpmn-moddle/pull/7)) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
+| `formKey` | attribute | user task | done ([jylups/flowable-bpmn-moddle#7](https://github.com/jylups/flowable-bpmn-moddle/pull/7)) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
+| `formFieldValidation` | attribute | user task | done ([jylups/flowable-bpmn-moddle#7](https://github.com/jylups/flowable-bpmn-moddle/pull/7)) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
+| `sameDeployment` | attribute | user task | done ([jylups/flowable-bpmn-moddle#7](https://github.com/jylups/flowable-bpmn-moddle/pull/7)) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
+| `priority` | attribute | user task | done ([jylups/flowable-bpmn-moddle#7](https://github.com/jylups/flowable-bpmn-moddle/pull/7)) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
+| `extensionId` | attribute | user task | done ([jylups/flowable-bpmn-moddle#7](https://github.com/jylups/flowable-bpmn-moddle/pull/7)) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
+| `skipExpression` | attribute | user task | done ([jylups/flowable-bpmn-moddle#7](https://github.com/jylups/flowable-bpmn-moddle/pull/7)) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
+| `taskIdVariableName` | attribute | user task | done ([jylups/flowable-bpmn-moddle#7](https://github.com/jylups/flowable-bpmn-moddle/pull/7)) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
+| `taskCompleterVariableName` | attribute | user task | done ([jylups/flowable-bpmn-moddle#7](https://github.com/jylups/flowable-bpmn-moddle/pull/7)) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
+| customResource (name, resourceAssignmentExpression) | element | user task | done ([jylups/flowable-bpmn-moddle#7](https://github.com/jylups/flowable-bpmn-moddle/pull/7)) | todo [#25](https://github.com/jylups/bpmn-js-env/issues/25) |  |  |
 
 ## Service task
 
