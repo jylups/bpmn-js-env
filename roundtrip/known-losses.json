@@ -12,10 +12,6 @@
       "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
       "note": "<flowable:work-form-field-validation> is not in the engine inventory (Flowable Work/Design or a test-only element). It must survive load and save once the flowable namespace has types: unknown flowable:* content has to be kept as generic content"
     },
-    "dropped-element bpmn:extensionElements > flowable:in": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/14",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:in> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
     "dropped-element bpmn:operation > bpmn:inMessageRef": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
       "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
@@ -23,10 +19,6 @@
     "dropped-element bpmn:extensionElements > flowable:task-candidates-type": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
       "note": "<flowable:task-candidates-type> is not in the engine inventory (Flowable Work/Design or a test-only element). It must survive load and save once the flowable namespace has types: unknown flowable:* content has to be kept as generic content"
-    },
-    "dropped-element bpmn:extensionElements > flowable:out": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/14",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:out> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
     },
     "dropped-element bpmn:operation > bpmn:outMessageRef": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
@@ -299,6 +291,10 @@
     "changed-attribute flowable:mapException@includeChildExceptions": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
       "note": "Accepted: an intentionally invalid Flowable test model (includeChildExceptions=\"NoTrueOrFalse\", which Flowable rejects with an XMLException); the attribute is a boolean and is written as false"
+    },
+    "changed-attribute bpmn:callActivity@flowable:fallbackToDefaultTenant": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: an intentionally invalid Flowable test model (fallbackToDefaultTenant=\"${1}\"). Flowable stores the attribute as a Boolean parsed from the text and does not evaluate expressions, so the engine already sees false; the attribute is a boolean and is written as false"
     }
   }
 }
