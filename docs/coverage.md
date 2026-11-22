@@ -164,15 +164,15 @@ Inventory section 10. Moddle: [#15](https://github.com/jylups/bpmn-js-env/issues
 
 | Extension | Kind | On | Moddle | Panel | Behaviors | Editor |
 |---|---|---|---|---|---|---|
-| `collection` | attribute | multiInstanceLoopCharacteristics | todo [#15](https://github.com/jylups/bpmn-js-env/issues/15) | todo [#29](https://github.com/jylups/bpmn-js-env/issues/29) |  |  |
-| `elementVariable` | attribute | multiInstanceLoopCharacteristics | todo [#15](https://github.com/jylups/bpmn-js-env/issues/15) | todo [#29](https://github.com/jylups/bpmn-js-env/issues/29) |  |  |
-| `elementIndexVariable` | attribute | multiInstanceLoopCharacteristics | todo [#15](https://github.com/jylups/bpmn-js-env/issues/15) | todo [#29](https://github.com/jylups/bpmn-js-env/issues/29) |  |  |
-| `noWaitStatesAsyncLeave` | attribute | multiInstanceLoopCharacteristics | todo [#15](https://github.com/jylups/bpmn-js-env/issues/15) | todo [#29](https://github.com/jylups/bpmn-js-env/issues/29) |  |  |
-| collection (class, delegateExpression) | element | multiInstanceLoopCharacteristics | todo [#15](https://github.com/jylups/bpmn-js-env/issues/15) | todo [#29](https://github.com/jylups/bpmn-js-env/issues/29) |  |  |
-| collection › string / expression | child | collection | todo [#15](https://github.com/jylups/bpmn-js-env/issues/15) | todo [#29](https://github.com/jylups/bpmn-js-env/issues/29) |  |  |
-| `variableAggregation` | element | multiInstanceLoopCharacteristics | todo [#15](https://github.com/jylups/bpmn-js-env/issues/15) | todo [#29](https://github.com/jylups/bpmn-js-env/issues/29) |  |  |
-| variableAggregation: target, targetExpression, storeAsTransientVariable, createOverviewVariable, class, delegateExpression | attribute | variableAggregation | todo [#15](https://github.com/jylups/bpmn-js-env/issues/15) | todo [#29](https://github.com/jylups/bpmn-js-env/issues/29) |  |  |
-| variableAggregation › variable (source, sourceExpression, target, targetExpression; written unprefixed) | child | variableAggregation | todo [#15](https://github.com/jylups/bpmn-js-env/issues/15) | todo [#29](https://github.com/jylups/bpmn-js-env/issues/29) |  |  |
+| `collection` | attribute | multiInstanceLoopCharacteristics | done ([jylups/flowable-bpmn-moddle#11](https://github.com/jylups/flowable-bpmn-moddle/pull/11)) | todo [#29](https://github.com/jylups/bpmn-js-env/issues/29) |  |  |
+| `elementVariable` | attribute | multiInstanceLoopCharacteristics | done ([jylups/flowable-bpmn-moddle#11](https://github.com/jylups/flowable-bpmn-moddle/pull/11)) | todo [#29](https://github.com/jylups/bpmn-js-env/issues/29) |  |  |
+| `elementIndexVariable` | attribute | multiInstanceLoopCharacteristics | done ([jylups/flowable-bpmn-moddle#11](https://github.com/jylups/flowable-bpmn-moddle/pull/11)) | todo [#29](https://github.com/jylups/bpmn-js-env/issues/29) |  |  |
+| `noWaitStatesAsyncLeave` | attribute | multiInstanceLoopCharacteristics | done ([jylups/flowable-bpmn-moddle#11](https://github.com/jylups/flowable-bpmn-moddle/pull/11)) | todo [#29](https://github.com/jylups/bpmn-js-env/issues/29) |  |  |
+| collection (class, delegateExpression) | element | multiInstanceLoopCharacteristics | done ([jylups/flowable-bpmn-moddle#11](https://github.com/jylups/flowable-bpmn-moddle/pull/11)) | todo [#29](https://github.com/jylups/bpmn-js-env/issues/29) |  |  |
+| collection › string / expression | child | collection | done ([jylups/flowable-bpmn-moddle#11](https://github.com/jylups/flowable-bpmn-moddle/pull/11)) | todo [#29](https://github.com/jylups/bpmn-js-env/issues/29) |  |  |
+| `variableAggregation` | element | multiInstanceLoopCharacteristics | done ([jylups/flowable-bpmn-moddle#11](https://github.com/jylups/flowable-bpmn-moddle/pull/11)) | todo [#29](https://github.com/jylups/bpmn-js-env/issues/29) |  |  |
+| variableAggregation: target, targetExpression, storeAsTransientVariable, createOverviewVariable, class, delegateExpression | attribute | variableAggregation | done ([jylups/flowable-bpmn-moddle#11](https://github.com/jylups/flowable-bpmn-moddle/pull/11)) | todo [#29](https://github.com/jylups/bpmn-js-env/issues/29) |  |  |
+| variableAggregation › variable (source, sourceExpression, target, targetExpression; written unprefixed) | child | variableAggregation | done ([jylups/flowable-bpmn-moddle#11](https://github.com/jylups/flowable-bpmn-moddle/pull/11)) | todo [#29](https://github.com/jylups/bpmn-js-env/issues/29) |  |  |
 
 ## Events and event definitions
 
