@@ -24,18 +24,6 @@
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
       "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
     },
-    "dropped-element bpmn:extensionElements > flowable:variableListenerEventDefinition": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/16",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:variableListenerEventDefinition> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
-    "dropped-element bpmn:extensionElements > flowable:eventCorrelationParameter": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/16",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:eventCorrelationParameter> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
-    "dropped-element bpmn:extensionElements > flowable:startEventCorrelationConfiguration": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/16",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:startEventCorrelationConfiguration> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
     "dropped-element bpmn:multiInstanceLoopCharacteristics > bpmn:loopDataInputRef": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
       "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
@@ -80,10 +68,6 @@
       "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
       "note": "<flowable:customValue> is not in the engine inventory (Flowable Work/Design or a test-only element). It must survive load and save once the flowable namespace has types: unknown flowable:* content has to be kept as generic content"
     },
-    "dropped-element bpmn:extensionElements > flowable:eventName": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/16",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:eventName> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
     "dropped-element bpmn:extensionElements > flowable:testValue": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
       "note": "<flowable:testValue> is not in the engine inventory (Flowable Work/Design or a test-only element). It must survive load and save once the flowable namespace has types: unknown flowable:* content has to be kept as generic content"
@@ -97,8 +81,8 @@
       "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
     },
     "dropped-attribute bpmn:errorEventDefinition@errorRef": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/16",
-      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Decide in Phase 1 how to keep it"
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
+      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Options are in #62"
     },
     "dropped-attribute di:waypoint@xsi:type": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
@@ -117,8 +101,8 @@
       "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
     },
     "dropped-attribute bpmn:messageEventDefinition@messageRef": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/16",
-      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Decide in Phase 1 how to keep it"
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
+      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Options are in #62"
     },
     "dropped-attribute bpmn:dataInput@itemSubjectRef": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/17",
@@ -157,12 +141,12 @@
       "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
     },
     "dropped-attribute bpmn:signalEventDefinition@signalRef": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/16",
-      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Decide in Phase 1 how to keep it"
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
+      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Options are in #62"
     },
     "dropped-attribute bpmn:escalationEventDefinition@escalationRef": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/16",
-      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Decide in Phase 1 how to keep it"
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
+      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Options are in #62"
     },
     "dropped-attribute activiti:customResource@activiti:name": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/18",

@@ -136,7 +136,7 @@ Inventory section 6, 7, 8. Moddle: [#13](https://github.com/jylups/bpmn-js-env/i
 | ruleVariablesInput, rules, resultVariable, class, exclude | attribute | business rule task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
 | type + field (mail, camel, dmn) | attribute | send task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
 | `skipExpression` | attribute | receive task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
-| eventType and event registry elements | element | receive task | todo [#16](https://github.com/jylups/bpmn-js-env/issues/16) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
+| eventType and event registry elements | element | receive task | done ([jylups/flowable-bpmn-moddle#12](https://github.com/jylups/flowable-bpmn-moddle/pull/12)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
 
 ## Call activity
 
@@ -180,21 +180,21 @@ Inventory section 11, 12. Moddle: [#16](https://github.com/jylups/bpmn-js-env/is
 
 | Extension | Kind | On | Moddle | Panel | Behaviors | Editor |
 |---|---|---|---|---|---|---|
-| `businessCalendarName` | attribute | timerEventDefinition | todo [#16](https://github.com/jylups/bpmn-js-env/issues/16) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
-| `endDate` | attribute | timeCycle | todo [#16](https://github.com/jylups/bpmn-js-env/issues/16) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
-| `signalExpression` | attribute | signalEventDefinition | todo [#16](https://github.com/jylups/bpmn-js-env/issues/16) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
-| `async` | attribute | signalEventDefinition (throw) | todo [#16](https://github.com/jylups/bpmn-js-env/issues/16) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
-| `messageExpression` | attribute | messageEventDefinition | todo [#16](https://github.com/jylups/bpmn-js-env/issues/16) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
-| errorVariableName, errorVariableTransient, errorVariableLocalScope | attribute | errorEventDefinition | todo [#16](https://github.com/jylups/bpmn-js-env/issues/16) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
-| terminateAll, terminateMultiInstance | attribute | terminateEventDefinition | todo [#16](https://github.com/jylups/bpmn-js-env/issues/16) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
-| variableListenerEventDefinition (variableName, variableChangeType) | element | start (event sub-process), boundary, catch events | todo [#16](https://github.com/jylups/bpmn-js-env/issues/16) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
-| `in` | element | boundary and intermediate catch events | todo [#16](https://github.com/jylups/bpmn-js-env/issues/16) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
-| `out` | element | end event, intermediate throw event | todo [#16](https://github.com/jylups/bpmn-js-env/issues/16) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
+| `businessCalendarName` | attribute | timerEventDefinition | done ([jylups/flowable-bpmn-moddle#12](https://github.com/jylups/flowable-bpmn-moddle/pull/12)) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
+| `endDate` | attribute | timeCycle | done ([jylups/flowable-bpmn-moddle#12](https://github.com/jylups/flowable-bpmn-moddle/pull/12)) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
+| `signalExpression` | attribute | signalEventDefinition | done ([jylups/flowable-bpmn-moddle#12](https://github.com/jylups/flowable-bpmn-moddle/pull/12)) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
+| `async` | attribute | signalEventDefinition (throw) | done ([jylups/flowable-bpmn-moddle#12](https://github.com/jylups/flowable-bpmn-moddle/pull/12)) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
+| `messageExpression` | attribute | messageEventDefinition | done ([jylups/flowable-bpmn-moddle#12](https://github.com/jylups/flowable-bpmn-moddle/pull/12)) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
+| errorVariableName, errorVariableTransient, errorVariableLocalScope | attribute | errorEventDefinition | done ([jylups/flowable-bpmn-moddle#12](https://github.com/jylups/flowable-bpmn-moddle/pull/12)) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
+| terminateAll, terminateMultiInstance | attribute | terminateEventDefinition | done ([jylups/flowable-bpmn-moddle#12](https://github.com/jylups/flowable-bpmn-moddle/pull/12)) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
+| variableListenerEventDefinition (variableName, variableChangeType) | element | start (event sub-process), boundary, catch events | done ([jylups/flowable-bpmn-moddle#12](https://github.com/jylups/flowable-bpmn-moddle/pull/12)) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
+| `in` | element | boundary and intermediate catch events | done ([jylups/flowable-bpmn-moddle#12](https://github.com/jylups/flowable-bpmn-moddle/pull/12)) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
+| `out` | element | end event, intermediate throw event | done ([jylups/flowable-bpmn-moddle#12](https://github.com/jylups/flowable-bpmn-moddle/pull/12)) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
 | `eventType` | element | catch events, receive task | done ([jylups/flowable-bpmn-moddle#8](https://github.com/jylups/flowable-bpmn-moddle/pull/8)) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
-| `eventName` | element | catch events | todo [#16](https://github.com/jylups/bpmn-js-env/issues/16) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
-| eventCorrelationParameter (name, value) | element | catch events, receive task | todo [#16](https://github.com/jylups/bpmn-js-env/issues/16) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
+| `eventName` | element | catch events | done ([jylups/flowable-bpmn-moddle#12](https://github.com/jylups/flowable-bpmn-moddle/pull/12)) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
+| eventCorrelationParameter (name, value) | element | catch events, receive task | done ([jylups/flowable-bpmn-moddle#12](https://github.com/jylups/flowable-bpmn-moddle/pull/12)) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
 | eventOutParameter (source, target, sourceType, transient) | element | catch events, receive task | done ([jylups/flowable-bpmn-moddle#8](https://github.com/jylups/flowable-bpmn-moddle/pull/8)) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
-| `startEventCorrelationConfiguration` | element | start event | todo [#16](https://github.com/jylups/bpmn-js-env/issues/16) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
+| `startEventCorrelationConfiguration` | element | start event | done ([jylups/flowable-bpmn-moddle#12](https://github.com/jylups/flowable-bpmn-moddle/pull/12)) | todo [#30](https://github.com/jylups/bpmn-js-env/issues/30) |  |  |
 
 ## Data objects, signals, sequence flows and DI
 
