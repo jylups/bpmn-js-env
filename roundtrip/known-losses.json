@@ -12,10 +12,6 @@
       "issue": "https://github.com/jylups/bpmn-js-env/issues/16",
       "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:eventType> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
     },
-    "dropped-element bpmn:resourceAssignmentExpression > bpmn:formalExpression": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/11",
-      "note": "bpmn-moddle writes <formalExpression> back as <expression xsi:type=\"bpmn:tFormalExpression\">. Check that Flowable still reads potentialOwner, potentialStarter and customResource assignments written that way; if not, keep <formalExpression>"
-    },
     "dropped-element bpmn:extensionElements > flowable:work-form-field-validation": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
       "note": "<flowable:work-form-field-validation> is not in the engine inventory (Flowable Work/Design or a test-only element). It must survive load and save once the flowable namespace has types: unknown flowable:* content has to be kept as generic content"
@@ -67,14 +63,6 @@
     "dropped-element bpmn:extensionElements > flowable:channelKey": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/12",
       "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:channelKey> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
-    "dropped-element bpmn:extensionElements > flowable:historyLevel": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/10",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:historyLevel> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
-    "dropped-element bpmn:extensionElements > flowable:value": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/17",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:value> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
     },
     "dropped-element bpmn:extensionElements > flowable:startEventCorrelationConfiguration": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/16",
@@ -147,10 +135,6 @@
     "dropped-element bpmn:extensionElements > dc:Bounds": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
       "note": "Accepted: an intentionally invalid Flowable test model (for example an illegal or duplicate ID, or an element BPMN does not define); bpmn-moddle reports it and drops it"
-    },
-    "dropped-element bpmn:extensionElements > flowable:formProperty": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/10",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:formProperty> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
     },
     "dropped-element bpmn:process > bpmn:invalid": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
@@ -323,10 +307,6 @@
     "changed-attribute bpmn:conditionExpression@xsi:type": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
       "note": "Accepted: an unprefixed \"tFormalExpression\" is written as \"bpmn:tFormalExpression\", the same type"
-    },
-    "added-element bpmn:resourceAssignmentExpression > bpmn:expression": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/11",
-      "note": "bpmn-moddle writes <formalExpression> back as <expression xsi:type=\"bpmn:tFormalExpression\">. Check that Flowable still reads potentialOwner, potentialStarter and customResource assignments written that way; if not, keep <formalExpression>"
     },
     "added-attribute activiti:customResource@name": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
