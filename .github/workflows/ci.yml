@@ -1,0 +1,66 @@
+name: CI
+
+# Checks the whole workspace: the playground and the main branches of the
+# four package repositories, installed together with npm workspaces.
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  workspace:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout bpmn-js-env
+        uses: actions/checkout@v7
+
+      - name: Checkout flowable-bpmn-moddle
+        uses: actions/checkout@v7
+        with:
+          repository: jylups/flowable-bpmn-moddle
+          path: flowable-bpmn-moddle
+
+      - name: Checkout bpmn-js-properties-panel-flowable
+        uses: actions/checkout@v7
+        with:
+          repository: jylups/bpmn-js-properties-panel-flowable
+          path: bpmn-js-properties-panel-flowable
+
+      - name: Checkout flowable-bpmn-js-behaviors
+        uses: actions/checkout@v7
+        with:
+          repository: jylups/flowable-bpmn-js-behaviors
+          path: flowable-bpmn-js-behaviors
+
+      - name: Checkout flowable-bpmn-js
+        uses: actions/checkout@v7
+        with:
+          repository: jylups/flowable-bpmn-js
+          path: flowable-bpmn-js
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright's Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
