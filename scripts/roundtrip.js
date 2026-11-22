@@ -17,6 +17,12 @@
  *                       exits with 1 when a difference is not in it
  *   --update-baseline   add the current differences to the baseline and remove
  *                       the ones no longer found
+ *   --migrate-activiti  move models to the Flowable namespace before importing
+ *                       (migrateActivitiXML and useFlowablePrefix from
+ *                       flowable-bpmn-moddle) and compare the Activiti and
+ *                       Flowable namespaces as one; uses
+ *                       roundtrip/known-losses-migrated.json as the default
+ *                       baseline and roundtrip-report-migrated.* as reports
  *
  * The original and exported XML are compared as namespace-resolved trees, so
  * namespace prefixes, element order, whitespace, CDATA and number formatting
@@ -30,6 +36,8 @@ import { fileURLToPath } from 'node:url';
 
 import { DOMParser } from '@xmldom/xmldom';
 import { BpmnModdle } from 'bpmn-moddle';
+
+import { migrateActivitiXML, useFlowablePrefix } from '../flowable-bpmn-moddle/lib/migrate.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -95,7 +103,8 @@ function parseArgs(argv) {
     json: 'roundtrip-report.json',
     markdown: 'roundtrip-report.md',
     baseline: path.join('roundtrip', 'known-losses.json'),
-    updateBaseline: false
+    updateBaseline: false,
+    migrateActiviti: false
   };
 
   for (let i = 0; i < argv.length; i++) {
@@ -109,9 +118,26 @@ function parseArgs(argv) {
       args.baseline = argv[++i];
     } else if (arg === '--update-baseline') {
       args.updateBaseline = true;
+    } else if (arg === '--migrate-activiti') {
+      args.migrateActiviti = true;
     } else {
       args.dirs.push(arg);
     }
+  }
+
+  if (args.migrateActiviti) {
+    const defaults = { json: 'roundtrip-report.json', markdown: 'roundtrip-report.md', baseline: path.join('roundtrip', 'known-losses.json') };
+    const migrated = { json: 'roundtrip-report-migrated.json', markdown: 'roundtrip-report-migrated.md', baseline: path.join('roundtrip', 'known-losses-migrated.json') };
+
+    for (const key of Object.keys(defaults)) {
+      if (args[key] === defaults[key]) {
+        args[key] = migrated[key];
+      }
+    }
+
+    // compare both namespaces as one: an Activiti spelling written back as
+    // flowable is the intended result, not a difference
+    NAMESPACES['http://activiti.org/bpmn'] = 'flowable';
   }
 
   if (!args.dirs.length) {
@@ -156,8 +182,14 @@ function createModdle() {
   return new BpmnModdle({ flowable: flowableDescriptor });
 }
 
+let migrateActiviti = false;
+
 async function roundtrip(xml) {
   const moddle = createModdle();
+
+  if (migrateActiviti) {
+    xml = migrateActivitiXML(xml);
+  }
 
   let imported;
 
@@ -178,6 +210,10 @@ async function roundtrip(xml) {
   let result;
 
   try {
+    if (migrateActiviti) {
+      useFlowablePrefix(imported.rootElement);
+    }
+
     const { xml: savedXML } = await moddle.toXML(imported.rootElement);
 
     result = { savedXML };
@@ -507,7 +543,7 @@ function toMarkdown(summary, areas, groups, warnings, baseline, fixed) {
   const lines = [];
   const w = line => lines.push(line);
 
-  w('## Load-and-save report');
+  w(migrateActiviti ? '## Load-and-save report (Activiti namespace migrated)' : '## Load-and-save report');
   w('');
   w('| | Files |');
   w('|---|---|');
@@ -566,6 +602,8 @@ function toMarkdown(summary, areas, groups, warnings, baseline, fixed) {
 
 async function main() {
   const args = parseArgs(process.argv.slice(2));
+
+  migrateActiviti = args.migrateActiviti;
   const files = args.dirs.flatMap(dir => findModels(dir));
 
   if (!files.length) {
