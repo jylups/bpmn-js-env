@@ -67,7 +67,7 @@ Inventory section 2, 3. Moddle: [#10](https://github.com/jylups/bpmn-js-env/issu
 | formProperty: datePattern, lenientDateParsing | attribute | formProperty | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
 | formProperty: readable, writable, required | attribute | formProperty | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
 | formProperty › value (id, name) | child | formProperty | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
-| in (start event) | element | start event | todo [#14](https://github.com/jylups/bpmn-js-env/issues/14) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
+| in (start event) | element | start event | done ([jylups/flowable-bpmn-moddle#10](https://github.com/jylups/flowable-bpmn-moddle/pull/10)) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
 
 ## User task
 
@@ -113,7 +113,7 @@ Inventory section 5. Moddle: [#12](https://github.com/jylups/bpmn-js-env/issues/
 | caseDefinitionKey, caseInstanceName (case) | attribute | service task | done ([jylups/flowable-bpmn-moddle#8](https://github.com/jylups/flowable-bpmn-moddle/pull/8)) | todo [#26](https://github.com/jylups/bpmn-js-env/issues/26) |  |  |
 | businessKey, inheritBusinessKey, inheritVariables (case) | attribute | service task | done ([jylups/flowable-bpmn-moddle#8](https://github.com/jylups/flowable-bpmn-moddle/pull/8)) | todo [#26](https://github.com/jylups/bpmn-js-env/issues/26) |  |  |
 | sameDeployment, fallbackToDefaultTenant, idVariableName (case) | attribute | service task | done ([jylups/flowable-bpmn-moddle#8](https://github.com/jylups/flowable-bpmn-moddle/pull/8)) | todo [#26](https://github.com/jylups/bpmn-js-env/issues/26) |  |  |
-| in / out (case) | element | service task | todo [#14](https://github.com/jylups/bpmn-js-env/issues/14) | todo [#26](https://github.com/jylups/bpmn-js-env/issues/26) |  |  |
+| in / out (case) | element | service task | done ([jylups/flowable-bpmn-moddle#10](https://github.com/jylups/flowable-bpmn-moddle/pull/10)) | todo [#26](https://github.com/jylups/bpmn-js-env/issues/26) |  |  |
 | topic, doNotIncludeVariables (external-worker) | attribute | service task | done ([jylups/flowable-bpmn-moddle#8](https://github.com/jylups/flowable-bpmn-moddle/pull/8)) | todo [#26](https://github.com/jylups/bpmn-js-env/issues/26) |  |  |
 | externalWorkerInParameter / externalWorkerOutParameter | element | service task (external-worker) | done ([jylups/flowable-bpmn-moddle#8](https://github.com/jylups/flowable-bpmn-moddle/pull/8)) | todo [#26](https://github.com/jylups/bpmn-js-env/issues/26) |  |  |
 | eventType, triggerEventType (send-event) | element | service task (send-event) | done ([jylups/flowable-bpmn-moddle#8](https://github.com/jylups/flowable-bpmn-moddle/pull/8)) | todo [#26](https://github.com/jylups/bpmn-js-env/issues/26) |  |  |
@@ -132,7 +132,7 @@ Inventory section 6, 7, 8. Moddle: [#13](https://github.com/jylups/bpmn-js-env/i
 | `autoStoreVariables` | attribute | script task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
 | `doNotIncludeVariables` | attribute | script task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
 | `skipExpression` | attribute | script task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
-| in (script task) | element | script task | todo [#14](https://github.com/jylups/bpmn-js-env/issues/14) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
+| in (script task) | element | script task | done ([jylups/flowable-bpmn-moddle#10](https://github.com/jylups/flowable-bpmn-moddle/pull/10)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
 | ruleVariablesInput, rules, resultVariable, class, exclude | attribute | business rule task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
 | type + field (mail, camel, dmn) | attribute | send task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
 | `skipExpression` | attribute | receive task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
@@ -144,19 +144,19 @@ Inventory section 9. Moddle: [#14](https://github.com/jylups/bpmn-js-env/issues/
 
 | Extension | Kind | On | Moddle | Panel | Behaviors | Editor |
 |---|---|---|---|---|---|---|
-| `calledElementType` | attribute | call activity | todo [#14](https://github.com/jylups/bpmn-js-env/issues/14) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  | todo [#44](https://github.com/jylups/bpmn-js-env/issues/44) |
-| `processInstanceName` | attribute | call activity | todo [#14](https://github.com/jylups/bpmn-js-env/issues/14) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
-| businessKey, inheritBusinessKey | attribute | call activity | todo [#14](https://github.com/jylups/bpmn-js-env/issues/14) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
-| `inheritVariables` | attribute | call activity | todo [#14](https://github.com/jylups/bpmn-js-env/issues/14) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
-| sameDeployment (legacy calledElementBinding) | attribute | call activity | todo [#14](https://github.com/jylups/bpmn-js-env/issues/14) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
-| `useLocalScopeForOutParameters` | attribute | call activity | todo [#14](https://github.com/jylups/bpmn-js-env/issues/14) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
-| `completeAsync` | attribute | call activity | todo [#14](https://github.com/jylups/bpmn-js-env/issues/14) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
-| `fallbackToDefaultTenant` | attribute | call activity | todo [#14](https://github.com/jylups/bpmn-js-env/issues/14) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
-| `idVariableName` | attribute | call activity | todo [#14](https://github.com/jylups/bpmn-js-env/issues/14) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
-| in / out | element | call activity | todo [#14](https://github.com/jylups/bpmn-js-env/issues/14) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
-| in/out: source, sourceExpression, target, targetExpression | attribute | in/out | todo [#14](https://github.com/jylups/bpmn-js-env/issues/14) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
-| in/out: sourceType, targetType, transient | attribute | in/out | todo [#14](https://github.com/jylups/bpmn-js-env/issues/14) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
-| in/out: variables="all", local, businessKey (Activiti 5) | attribute | in/out | todo [#14](https://github.com/jylups/bpmn-js-env/issues/14) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
+| `calledElementType` | attribute | call activity | done ([jylups/flowable-bpmn-moddle#10](https://github.com/jylups/flowable-bpmn-moddle/pull/10)) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  | todo [#44](https://github.com/jylups/bpmn-js-env/issues/44) |
+| `processInstanceName` | attribute | call activity | done ([jylups/flowable-bpmn-moddle#10](https://github.com/jylups/flowable-bpmn-moddle/pull/10)) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
+| businessKey, inheritBusinessKey | attribute | call activity | done ([jylups/flowable-bpmn-moddle#10](https://github.com/jylups/flowable-bpmn-moddle/pull/10)) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
+| `inheritVariables` | attribute | call activity | done ([jylups/flowable-bpmn-moddle#10](https://github.com/jylups/flowable-bpmn-moddle/pull/10)) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
+| sameDeployment (legacy calledElementBinding) | attribute | call activity | done ([jylups/flowable-bpmn-moddle#10](https://github.com/jylups/flowable-bpmn-moddle/pull/10)) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
+| `useLocalScopeForOutParameters` | attribute | call activity | done ([jylups/flowable-bpmn-moddle#10](https://github.com/jylups/flowable-bpmn-moddle/pull/10)) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
+| `completeAsync` | attribute | call activity | done ([jylups/flowable-bpmn-moddle#10](https://github.com/jylups/flowable-bpmn-moddle/pull/10)) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
+| `fallbackToDefaultTenant` | attribute | call activity | done ([jylups/flowable-bpmn-moddle#10](https://github.com/jylups/flowable-bpmn-moddle/pull/10)) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
+| `idVariableName` | attribute | call activity | done ([jylups/flowable-bpmn-moddle#10](https://github.com/jylups/flowable-bpmn-moddle/pull/10)) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
+| in / out | element | call activity | done ([jylups/flowable-bpmn-moddle#10](https://github.com/jylups/flowable-bpmn-moddle/pull/10)) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
+| in/out: source, sourceExpression, target, targetExpression | attribute | in/out | done ([jylups/flowable-bpmn-moddle#10](https://github.com/jylups/flowable-bpmn-moddle/pull/10)) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
+| in/out: sourceType, targetType, transient | attribute | in/out | done ([jylups/flowable-bpmn-moddle#10](https://github.com/jylups/flowable-bpmn-moddle/pull/10)) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
+| in/out: variables="all", local, businessKey (Activiti 5) | attribute | in/out | done ([jylups/flowable-bpmn-moddle#10](https://github.com/jylups/flowable-bpmn-moddle/pull/10)) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
 
 ## Multi-instance
 
