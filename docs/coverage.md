@@ -128,15 +128,15 @@ Inventory section 6, 7, 8. Moddle: [#13](https://github.com/jylups/bpmn-js-env/i
 
 | Extension | Kind | On | Moddle | Panel | Behaviors | Editor |
 |---|---|---|---|---|---|---|
-| resultVariable (alias resultVariableName) | attribute | script task | todo [#13](https://github.com/jylups/bpmn-js-env/issues/13) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
-| `autoStoreVariables` | attribute | script task | todo [#13](https://github.com/jylups/bpmn-js-env/issues/13) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
-| `doNotIncludeVariables` | attribute | script task | todo [#13](https://github.com/jylups/bpmn-js-env/issues/13) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
-| `skipExpression` | attribute | script task | todo [#13](https://github.com/jylups/bpmn-js-env/issues/13) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
-| in (script task) | element | script task | todo [#13](https://github.com/jylups/bpmn-js-env/issues/13) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
-| ruleVariablesInput, rules, resultVariable, class, exclude | attribute | business rule task | todo [#13](https://github.com/jylups/bpmn-js-env/issues/13) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
-| type + field (mail, camel, dmn) | attribute | send task | todo [#13](https://github.com/jylups/bpmn-js-env/issues/13) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
-| `skipExpression` | attribute | receive task | todo [#13](https://github.com/jylups/bpmn-js-env/issues/13) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
-| eventType and event registry elements | element | receive task | todo [#13](https://github.com/jylups/bpmn-js-env/issues/13) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
+| resultVariable (alias resultVariableName) | attribute | script task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
+| `autoStoreVariables` | attribute | script task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
+| `doNotIncludeVariables` | attribute | script task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
+| `skipExpression` | attribute | script task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
+| in (script task) | element | script task | todo [#14](https://github.com/jylups/bpmn-js-env/issues/14) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
+| ruleVariablesInput, rules, resultVariable, class, exclude | attribute | business rule task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
+| type + field (mail, camel, dmn) | attribute | send task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
+| `skipExpression` | attribute | receive task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
+| eventType and event registry elements | element | receive task | todo [#16](https://github.com/jylups/bpmn-js-env/issues/16) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
 
 ## Call activity
 
