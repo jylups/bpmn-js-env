@@ -38,6 +38,8 @@ Run them from the workspace root:
 | `npm run lint` | lints every workspace |
 | `npm test` | runs the tests of every workspace |
 
+Tests use Vitest. The moddle package runs in Node; the panel, behaviors and editor packages run in headless Chromium through Playwright. Install Playwright's Chromium once with `npx playwright install chromium`, or use an installed Google Chrome with `TEST_BROWSER_CHANNEL=chrome npm test`.
+
 ## Playground
 
 The playground (Vite) loads bpmn-js with the bpmn.io properties panel:
