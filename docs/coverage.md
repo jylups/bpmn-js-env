@@ -53,21 +53,21 @@ Inventory section 2, 3. Moddle: [#10](https://github.com/jylups/bpmn-js-env/issu
 
 | Extension | Kind | On | Moddle | Panel | Behaviors | Editor |
 |---|---|---|---|---|---|---|
-| `candidateStarterUsers` | attribute | process | todo [#10](https://github.com/jylups/bpmn-js-env/issues/10) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
-| `candidateStarterGroups` | attribute | process | todo [#10](https://github.com/jylups/bpmn-js-env/issues/10) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
-| `isEagerExecutionFetching` | attribute | process | todo [#10](https://github.com/jylups/bpmn-js-env/issues/10) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
-| potentialStarter (resourceAssignmentExpression) | element | process | todo [#10](https://github.com/jylups/bpmn-js-env/issues/10) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
-| `historyLevel` | element | process | todo [#10](https://github.com/jylups/bpmn-js-env/issues/10) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
-| `initiator` | attribute | start event | todo [#10](https://github.com/jylups/bpmn-js-env/issues/10) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
-| `formKey` | attribute | start event | todo [#10](https://github.com/jylups/bpmn-js-env/issues/10) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
-| `formFieldValidation` | attribute | start event | todo [#10](https://github.com/jylups/bpmn-js-env/issues/10) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
-| `sameDeployment` | attribute | start event | todo [#10](https://github.com/jylups/bpmn-js-env/issues/10) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
-| `formProperty` | element | start event, user task | todo [#10](https://github.com/jylups/bpmn-js-env/issues/10) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
-| formProperty: id, name, type, expression, variable, default | attribute | formProperty | todo [#10](https://github.com/jylups/bpmn-js-env/issues/10) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
-| formProperty: datePattern, lenientDateParsing | attribute | formProperty | todo [#10](https://github.com/jylups/bpmn-js-env/issues/10) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
-| formProperty: readable, writable, required | attribute | formProperty | todo [#10](https://github.com/jylups/bpmn-js-env/issues/10) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
-| formProperty › value (id, name) | child | formProperty | todo [#10](https://github.com/jylups/bpmn-js-env/issues/10) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
-| in (start event) | element | start event | todo [#10](https://github.com/jylups/bpmn-js-env/issues/10) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
+| `candidateStarterUsers` | attribute | process | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
+| `candidateStarterGroups` | attribute | process | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
+| `isEagerExecutionFetching` | attribute | process | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
+| potentialStarter (resourceAssignmentExpression) | element | process | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
+| `historyLevel` | element | process | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
+| `initiator` | attribute | start event | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
+| `formKey` | attribute | start event | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
+| `formFieldValidation` | attribute | start event | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
+| `sameDeployment` | attribute | start event | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
+| `formProperty` | element | start event, user task | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
+| formProperty: id, name, type, expression, variable, default | attribute | formProperty | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
+| formProperty: datePattern, lenientDateParsing | attribute | formProperty | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
+| formProperty: readable, writable, required | attribute | formProperty | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
+| formProperty › value (id, name) | child | formProperty | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
+| in (start event) | element | start event | todo [#14](https://github.com/jylups/bpmn-js-env/issues/14) | todo [#24](https://github.com/jylups/bpmn-js-env/issues/24) |  |  |
 
 ## User task
 
@@ -202,7 +202,7 @@ Inventory section 10. Moddle: [#17](https://github.com/jylups/bpmn-js-env/issues
 
 | Extension | Kind | On | Moddle | Panel | Behaviors | Editor |
 |---|---|---|---|---|---|---|
-| `value` | element | dataObject | todo [#17](https://github.com/jylups/bpmn-js-env/issues/17) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
+| `value` | element | dataObject | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
 | itemSubjectRef types (string, int, long, double, boolean, datetime, json) | attribute | dataObject | todo [#17](https://github.com/jylups/bpmn-js-env/issues/17) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
 | scope (global, processInstance) | attribute | signal | todo [#17](https://github.com/jylups/bpmn-js-env/issues/17) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
 | skipExpression (written unprefixed) | attribute | sequence flow | todo [#17](https://github.com/jylups/bpmn-js-env/issues/17) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
