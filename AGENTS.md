@@ -58,7 +58,7 @@ All packages use the `@jylups/` scope: the unscoped names are taken on npm by ot
 - The bpmn-js licence requires the bpmn.io watermark to stay visible. Do not remove or cover it.
 - The CMMN packages (jylups/cmmn-js-env and its package repos) are reference only for this work. Do not change them from here; their own work is tracked on GitHub project 3.
 - Original artwork only: no icons or CSS copied from Flowable products.
-- Node 26 (see `.nvmrc` once the workspace exists).
+- Node 26 (see `.nvmrc`). Set up a checkout with `./setup.sh` and run the playground with `npm run dev` (see the README).
 
 ## Related work
 

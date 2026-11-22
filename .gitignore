@@ -1,0 +1,17 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+*.log
+
+# Package repositories, cloned into this workspace by setup.sh
+/flowable-bpmn-moddle/
+/bpmn-js-properties-panel-flowable/
+/flowable-bpmn-js-behaviors/
+/flowable-bpmn-js/
+
+# Editors and systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

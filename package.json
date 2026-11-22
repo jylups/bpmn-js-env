@@ -1,0 +1,21 @@
+{
+  "name": "bpmn-js-env",
+  "private": true,
+  "description": "Development workspace for the Flowable BPMN editor packages",
+  "workspaces": [
+    "flowable-bpmn-moddle",
+    "bpmn-js-properties-panel-flowable",
+    "flowable-bpmn-js-behaviors",
+    "flowable-bpmn-js",
+    "playground"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace playground",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm test --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
