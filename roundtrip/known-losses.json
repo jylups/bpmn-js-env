@@ -32,17 +32,9 @@
       "issue": "https://github.com/jylups/bpmn-js-env/issues/16",
       "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:eventCorrelationParameter> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
     },
-    "dropped-element bpmn:extensionElements > flowable:variableAggregation": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/15",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:variableAggregation> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
     "dropped-element bpmn:extensionElements > flowable:startEventCorrelationConfiguration": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/16",
       "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:startEventCorrelationConfiguration> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
-    "dropped-element bpmn:extensionElements > flowable:collection": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/15",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:collection> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
     },
     "dropped-element bpmn:multiInstanceLoopCharacteristics > bpmn:loopDataInputRef": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
@@ -295,6 +287,22 @@
     "changed-attribute bpmn:callActivity@flowable:fallbackToDefaultTenant": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
       "note": "Accepted: an intentionally invalid Flowable test model (fallbackToDefaultTenant=\"${1}\"). Flowable stores the attribute as a Boolean parsed from the text and does not evaluate expressions, so the engine already sees false; the attribute is a boolean and is written as false"
+    },
+    "dropped-attribute flowable:collection@flowable:class": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/15",
+      "note": "Accepted: written unprefixed, as Flowable's own exporter writes it; Flowable reads these attributes with getAttributeValue(null, ...), which ignores the namespace (FlowableCollectionParser)"
+    },
+    "dropped-attribute flowable:collection@flowable:delegateExpression": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/15",
+      "note": "Accepted: written unprefixed, as Flowable's own exporter writes it; Flowable reads these attributes with getAttributeValue(null, ...), which ignores the namespace (FlowableCollectionParser)"
+    },
+    "added-attribute flowable:collection@class": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/15",
+      "note": "Accepted: written unprefixed, as Flowable's own exporter writes it; Flowable reads these attributes with getAttributeValue(null, ...), which ignores the namespace (FlowableCollectionParser)"
+    },
+    "added-attribute flowable:collection@delegateExpression": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/15",
+      "note": "Accepted: written unprefixed, as Flowable's own exporter writes it; Flowable reads these attributes with getAttributeValue(null, ...), which ignores the namespace (FlowableCollectionParser)"
     }
   }
 }
