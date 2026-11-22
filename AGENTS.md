@@ -59,6 +59,10 @@ All packages use the `@jylups/` scope: the unscoped names are taken on npm by ot
 - Packages are published from GitHub releases with npm trusted publishing (OIDC); no npm tokens are stored.
 - Prereleases (`x.y.z-next.N`) go to the `next` tag, stable releases to `latest`.
 - After a release, verify the package on npm (`npm view <pkg> --prefer-online`) and unpack the tarball to check its contents.
+- Release flow: branch `release/<version>` with the version bump, a GitHub release tagged `v<version>` (marked as prerelease for `-next.N` versions), then a pull request that brings the version back to `main`.
+- CI: every package repository runs `ci.yml` (lint and tests on Node 24 and 26) and `publish.yml` (on published releases). This repository's `ci.yml` installs all packages together and lints, tests and builds the workspace.
+- First publish of a new package: npm only accepts a trusted publisher for a package that already exists, and an unused trusted publisher expires after 2 days. So, shortly before a package's first real release, the maintainer publishes version 0.0.0 once from their own machine (`npm publish --access public` in the package folder), then adds the trusted publisher on npmjs.com (package settings, GitHub Actions): user `jylups`, repository `<repo name>`, workflow `publish.yml`, no environment, allowing `npm publish`.
+- Main branches are protected by a "Main Branch" ruleset (no deletion, no force push); normal pull request merges need no bypass.
 
 ## Constraints
 
