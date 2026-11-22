@@ -1,7 +1,8 @@
 /**
  * Load-and-save report: imports BPMN models with bpmn-moddle and the Flowable
  * descriptor from the workspace's flowable-bpmn-moddle, exports them again and
- * reports what changed.
+ * reports what changed. Unknown flowable:* elements are kept through
+ * registerUnknownFlowableElements, as the editor imports them.
  *
  * Usage (from the workspace root):
  *
@@ -38,6 +39,7 @@ import { DOMParser } from '@xmldom/xmldom';
 import { BpmnModdle } from 'bpmn-moddle';
 
 import { migrateActivitiXML, useFlowablePrefix } from '../flowable-bpmn-moddle/lib/migrate.js';
+import { registerUnknownFlowableElements } from '../flowable-bpmn-moddle/lib/unknown.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -190,6 +192,9 @@ async function roundtrip(xml) {
   if (migrateActiviti) {
     xml = migrateActivitiXML(xml);
   }
+
+  // keep flowable:* elements the descriptor does not define, as the editor does
+  registerUnknownFlowableElements(moddle, xml);
 
   let imported;
 

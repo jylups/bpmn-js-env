@@ -1,6 +1,6 @@
 # Load-and-save report
 
-Checks that reading and writing real Flowable BPMN models with bpmn-moddle and the Flowable descriptor (`flowable-bpmn-moddle/resources/flowable.json` in this workspace) loses nothing.
+Checks that reading and writing real Flowable BPMN models with bpmn-moddle and the Flowable descriptor (`flowable-bpmn-moddle/resources/flowable.json` in this workspace) loses nothing. Models are imported the way the editor imports them: unknown `flowable:*` elements are kept through `registerUnknownFlowableElements`.
 
 ## Corpus
 
@@ -37,6 +37,6 @@ The original and saved XML are compared as namespace-resolved trees. Namespace p
 
 - **Phase 1 gaps:** `flowable:*` elements are dropped while the descriptor has no type for them, because bpmn-moddle drops unknown elements of a registered namespace. They point at the moddle sub-issue that adds the type.
 - **Accepted:** intentionally invalid test models, and references to IDs that no element in the file has. These point at [#6](https://github.com/jylups/bpmn-js-env/issues/6).
-- **To decide in Phase 1:** references that Flowable resolves by name or code (`errorRef`, `messageRef`, `signalRef`, `escalationRef`), untyped `itemSubjectRef="xsd:…"`, `formalExpression` written back as `expression`, unknown `flowable:*` elements from Flowable Work/Design, and models that bind the `flowable` prefix to the Activiti namespace.
+- **Open:** references that Flowable resolves by code or name (`errorRef`, `messageRef`, `signalRef`, `escalationRef`). The behaviors package will create the missing definitions on import (#67).
 
 When a change fixes a kind of difference, the report lists it under "No longer found". Remove it from the baseline in the same pull request, and update [docs/coverage.md](../docs/coverage.md). `npm run roundtrip -- --update-baseline` rewrites the baseline from the current report: it keeps the notes of entries that are still found, and new entries get an empty note to fill in.
