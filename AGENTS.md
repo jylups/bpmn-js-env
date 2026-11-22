@@ -39,6 +39,7 @@ All packages use the `@jylups/` scope: the unscoped names are taken on npm by ot
 - First the extensions the open-source Flowable engine reads, as listed in [docs/flowable-bpmn-extensions.md](docs/flowable-bpmn-extensions.md). That inventory comes from flowable/flowable-engine `main` at 64d64909.
 - Flowable Work/Design-only properties come in a later phase.
 - Read `activiti:` and `camunda:` spellings where the engine accepts them; always write `flowable:`.
+- [docs/coverage.md](docs/coverage.md) tracks which package covers each extension. A pull request that adds coverage updates the rows it touches in the same change.
 
 ## Branches, commits and pull requests
 

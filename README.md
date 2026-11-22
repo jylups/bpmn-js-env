@@ -4,6 +4,7 @@ Development workspace and issue tracker for the Flowable BPMN editor packages: m
 
 - Working conventions, repositories and planning: [AGENTS.md](AGENTS.md)
 - Flowable BPMN extension inventory: [docs/flowable-bpmn-extensions.md](docs/flowable-bpmn-extensions.md)
+- Coverage matrix (which package covers which extension): [docs/coverage.md](docs/coverage.md)
 - Board: [BPMN Flowable](https://github.com/users/jylups/projects/4)
 
 ## Setup
