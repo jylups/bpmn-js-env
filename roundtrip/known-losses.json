@@ -8,10 +8,6 @@
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
       "note": "Accepted: an intentionally invalid Flowable test model (for example an illegal or duplicate ID, or an element BPMN does not define); bpmn-moddle reports it and drops it"
     },
-    "dropped-element bpmn:extensionElements > flowable:field": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/9",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:field> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
     "dropped-element bpmn:extensionElements > flowable:eventType": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/16",
       "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:eventType> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
@@ -27,10 +23,6 @@
     "dropped-element bpmn:extensionElements > flowable:in": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/14",
       "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:in> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
-    "dropped-element bpmn:extensionElements > flowable:executionListener": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/9",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:executionListener> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
     },
     "dropped-element bpmn:operation > bpmn:inMessageRef": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
@@ -75,10 +67,6 @@
     "dropped-element bpmn:extensionElements > flowable:channelKey": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/12",
       "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:channelKey> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
-    "dropped-element bpmn:extensionElements > flowable:taskListener": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/9",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:taskListener> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
     },
     "dropped-element bpmn:extensionElements > flowable:historyLevel": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/10",
@@ -159,10 +147,6 @@
     "dropped-element bpmn:extensionElements > dc:Bounds": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
       "note": "Accepted: an intentionally invalid Flowable test model (for example an illegal or duplicate ID, or an element BPMN does not define); bpmn-moddle reports it and drops it"
-    },
-    "dropped-element bpmn:extensionElements > flowable:eventListener": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/9",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:eventListener> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
     },
     "dropped-element bpmn:extensionElements > flowable:formProperty": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/10",
