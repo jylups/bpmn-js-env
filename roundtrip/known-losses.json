@@ -100,10 +100,6 @@
       "issue": "https://github.com/jylups/bpmn-js-env/issues/12",
       "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:sendSynchronously> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
     },
-    "dropped-element bpmn:extensionElements > flowable:customResource": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/11",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:customResource> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
     "dropped-element bpmn:extensionElements > flowable:myTestEventDefinition": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
       "note": "<flowable:myTestEventDefinition> is not in the engine inventory (Flowable Work/Design or a test-only element). It must survive load and save once the flowable namespace has types: unknown flowable:* content has to be kept as generic content"
@@ -343,6 +339,14 @@
     "added-attribute yourco:i18ln@resourceBundleKeyForName": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
       "note": "Accepted for generic elements: the writer writes attributes of an unknown element's own namespace without a prefix; Flowable reads both. Revisit with the alias handling"
+    },
+    "dropped-attribute flowable:customResource@flowable:name": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/11",
+      "note": "Accepted: written as plain name, as Flowable's own exporter writes it (writeDefaultAttribute); Flowable's parser reads flowable:name and falls back to the unprefixed name (UserTaskXMLConverter, CustomIdentityLinkParser)"
+    },
+    "added-attribute flowable:customResource@name": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/11",
+      "note": "Accepted: written as plain name, as Flowable's own exporter writes it (writeDefaultAttribute); Flowable's parser reads flowable:name and falls back to the unprefixed name (UserTaskXMLConverter, CustomIdentityLinkParser)"
     }
   }
 }
