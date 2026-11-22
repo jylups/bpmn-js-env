@@ -47,6 +47,13 @@ All packages use the `@jylups/` scope: the unscoped names are taken on npm by ot
 - Pull requests are opened and merged without waiting for a review; report each pull request link and what was merged in the issue.
 - No AI tool, model or vendor attribution anywhere: commits (no co-author trailers), pull requests, issues, comments or docs.
 
+## Packages and tests
+
+- Each package is plain ES modules (`"type": "module"`, `exports`), published without a build step unless it needs a browser bundle.
+- Upstream bpmn.io packages are peer dependencies of the extension packages and regular dependencies of `@jylups/flowable-bpmn-js`.
+- Tests use Vitest: Node for `@jylups/flowable-bpmn-moddle`, browser mode (Playwright, headless Chromium) for the others. `TEST_BROWSER_CHANNEL=chrome` uses an installed Google Chrome instead of Playwright's Chromium.
+- Each package repository keeps its own `package-lock.json` for CI, generated outside the workspace with `npm install --package-lock-only --ignore-scripts`.
+
 ## Releases
 
 - Packages are published from GitHub releases with npm trusted publishing (OIDC); no npm tokens are stored.
