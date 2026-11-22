@@ -61,7 +61,11 @@ All packages use the `@jylups/` scope: the unscoped names are taken on npm by ot
 - After a release, verify the package on npm (`npm view <pkg> --prefer-online`) and unpack the tarball to check its contents.
 - Release flow: branch `release/<version>` with the version bump, a GitHub release tagged `v<version>` (marked as prerelease for `-next.N` versions), then a pull request that brings the version back to `main`.
 - CI: every package repository runs `ci.yml` (lint and tests on Node 24 and 26) and `publish.yml` (on published releases). This repository's `ci.yml` installs all packages together and lints, tests and builds the workspace.
-- First publish of a new package: npm only accepts a trusted publisher for a package that already exists, and an unused trusted publisher expires after 2 days. So, shortly before a package's first real release, the maintainer publishes version 0.0.0 once from their own machine (`npm publish --access public` in the package folder), then adds the trusted publisher on npmjs.com (package settings, GitHub Actions): user `jylups`, repository `<repo name>`, workflow `publish.yml`, no environment, allowing `npm publish`.
+- First publish of a new package: npm only accepts a trusted publisher for a package that already exists, and an unused trusted publisher expires after 2 days. So, shortly before a package's first real release:
+  1. The maintainer publishes version 0.0.0 once from their own machine with Node 26 (`npm publish --access public` in the package folder). npm may handle this as a staged publish: it first creates a `0.0.0-stage` placeholder, and 0.0.0 appears once the maintainer approves it (2FA).
+  2. Add the trusted publisher, either with the CLI (`npm trust github @jylups/<repo> --file publish.yml --repo jylups/<repo> --allow-publish --allow-stage-publish --yes`) or on npmjs.com (package settings, GitHub Actions: user `jylups`, repository `<repo>`, workflow `publish.yml`, no environment). Check it with `npm trust list @jylups/<repo>`.
+  3. Release a prerelease through GitHub within 2 days, and verify it with `npm view @jylups/<repo> dist-tags` and `npm audit signatures`. npm can take a minute or two to list a new version.
+- Trusted publishing is set up for `@jylups/flowable-bpmn-moddle` (first CI release: 0.0.1-next.0). The other packages get it before their first release.
 - Main branches are protected by a "Main Branch" ruleset (no deletion, no force push); normal pull request merges need no bypass.
 
 ## Constraints
