@@ -2,6 +2,7 @@
   "name": "bpmn-js-env",
   "private": true,
   "description": "Development workspace for the Flowable BPMN editor packages",
+  "type": "module",
   "workspaces": [
     "flowable-bpmn-moddle",
     "bpmn-js-properties-panel-flowable",
@@ -12,10 +13,19 @@
   "scripts": {
     "dev": "npm run dev --workspace playground",
     "build": "npm run build --workspaces --if-present",
-    "lint": "npm run lint --workspaces --if-present",
-    "test": "npm test --workspaces --if-present"
+    "lint": "eslint scripts && npm run lint --workspaces --if-present",
+    "test": "npm test --workspaces --if-present",
+    "roundtrip:fetch": "./scripts/fetch-flowable-models.sh",
+    "roundtrip": "node scripts/roundtrip.js"
   },
   "engines": {
     "node": ">=24"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@xmldom/xmldom": "^0.9.12",
+    "bpmn-moddle": "^10.3.1",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0"
   }
 }

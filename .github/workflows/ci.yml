@@ -64,3 +64,19 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      # load-and-save report over the Flowable engine's BPMN models; fails on a
+      # kind of difference that is not in roundtrip/known-losses.json
+      - name: Fetch Flowable engine models
+        run: npm run roundtrip:fetch
+
+      - name: Load-and-save report
+        run: npm run roundtrip
+
+      - name: Upload load-and-save report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: roundtrip-report
+          path: roundtrip-report.*
+          if-no-files-found: ignore
