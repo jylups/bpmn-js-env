@@ -73,10 +73,18 @@ jobs:
       - name: Load-and-save report
         run: npm run roundtrip
 
+      # the same models imported the way the editor imports them: the Activiti
+      # namespace moved to the Flowable one (migrateActivitiXML, useFlowablePrefix)
+      - name: Load-and-save report, Activiti namespace migrated
+        if: always()
+        run: npm run roundtrip -- --migrate-activiti
+
       - name: Upload load-and-save report
         if: always()
         uses: actions/upload-artifact@v7
         with:
           name: roundtrip-report
-          path: roundtrip-report.*
+          path: |
+            roundtrip-report.*
+            roundtrip-report-migrated.*
           if-no-files-found: ignore

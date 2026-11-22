@@ -1,0 +1,296 @@
+{
+  "losses": {
+    "import-error unparsable content <definitions> detected": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: an intentionally invalid Flowable test model (for example an illegal or duplicate ID, or an element BPMN does not define); bpmn-moddle reports it and drops it"
+    },
+    "dropped-element bpmn:extensionElements > flowable:work-form-field-validation": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/65",
+      "note": "<flowable:work-form-field-validation> is not in the engine inventory (Flowable Work/Design or a test-only element). Unknown flowable:* elements are dropped since the namespace has types; options are in #65"
+    },
+    "dropped-element bpmn:operation > bpmn:inMessageRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-element bpmn:extensionElements > flowable:task-candidates-type": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/65",
+      "note": "<flowable:task-candidates-type> is not in the engine inventory (Flowable Work/Design or a test-only element). Unknown flowable:* elements are dropped since the namespace has types; options are in #65"
+    },
+    "dropped-element bpmn:operation > bpmn:outMessageRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-element bpmn:multiInstanceLoopCharacteristics > bpmn:loopDataInputRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-element bpmn:extensionElements > flowable:myTestEventDefinition": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/65",
+      "note": "<flowable:myTestEventDefinition> is not in the engine inventory (Flowable Work/Design or a test-only element). Unknown flowable:* elements are dropped since the namespace has types; options are in #65"
+    },
+    "dropped-element bpmn:extensionElements > flowable:static-process-key": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/65",
+      "note": "<flowable:static-process-key> is not in the engine inventory (Flowable Work/Design or a test-only element). Unknown flowable:* elements are dropped since the namespace has types; options are in #65"
+    },
+    "dropped-element bpmn:process > bpmn:sequenceFlow": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: an intentionally invalid Flowable test model (for example an illegal or duplicate ID, or an element BPMN does not define); bpmn-moddle reports it and drops it"
+    },
+    "dropped-element bpmn:dataInputAssociation > bpmn:sourceRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-element bpmn:definitions > bpmn:process": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: an intentionally invalid Flowable test model (for example an illegal or duplicate ID, or an element BPMN does not define); bpmn-moddle reports it and drops it"
+    },
+    "dropped-element bpmn:extensionElements > dc:Bounds": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: an intentionally invalid Flowable test model (for example an illegal or duplicate ID, or an element BPMN does not define); bpmn-moddle reports it and drops it"
+    },
+    "dropped-element bpmn:extensionElements > flowable:strangeProperty": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/65",
+      "note": "A test-only element in the Activiti namespace; with the namespace migrated it is a flowable:* element without a type and is dropped. Options are in #65"
+    },
+    "dropped-element bpmn:process > bpmn:invalid": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: an intentionally invalid Flowable test model (for example an illegal or duplicate ID, or an element BPMN does not define); bpmn-moddle reports it and drops it"
+    },
+    "dropped-element bpmn:process > bpmn:startEventThisIsNotRight": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: an intentionally invalid Flowable test model (for example an illegal or duplicate ID, or an element BPMN does not define); bpmn-moddle reports it and drops it"
+    },
+    "dropped-element bpmn:extensionElements > flowable:condition": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/65",
+      "note": "<flowable:condition> is not in the engine inventory (Flowable Work/Design or a test-only element). Unknown flowable:* elements are dropped since the namespace has types; options are in #65"
+    },
+    "dropped-element bpmn:extensionElements > flowable:customValue": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/65",
+      "note": "<flowable:customValue> is not in the engine inventory (Flowable Work/Design or a test-only element). Unknown flowable:* elements are dropped since the namespace has types; options are in #65"
+    },
+    "dropped-element bpmn:extensionElements > flowable:testvalue": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/65",
+      "note": "A test-only element in the Activiti namespace; with the namespace migrated it is a flowable:* element without a type and is dropped. Options are in #65"
+    },
+    "dropped-element bpmn:extensionElements > flowable:testValue": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/65",
+      "note": "<flowable:testValue> is not in the engine inventory (Flowable Work/Design or a test-only element). Unknown flowable:* elements are dropped since the namespace has types; options are in #65"
+    },
+    "dropped-element bpmn:extensionElements > flowable:translation": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/65",
+      "note": "<flowable:translation> is not in the engine inventory (Flowable Work/Design or a test-only element). Unknown flowable:* elements are dropped since the namespace has types; options are in #65"
+    },
+    "dropped-attribute bpmndi:BPMNPlane@bpmnElement": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-attribute bpmn:errorEventDefinition@errorRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
+      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Options are in #62"
+    },
+    "dropped-attribute di:waypoint@xsi:type": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: an xsi:type annotation (omgdc:Point) on waypoints that carries no information"
+    },
+    "dropped-attribute bpmn:dataObject@itemSubjectRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
+      "note": "Flowable uses itemSubjectRef=\"xsd:string\" (and int, long, double, boolean, datetime, json) for typed data objects and properties without declaring an itemDefinition. bpmn-moddle drops it as unresolved. Options are in #62"
+    },
+    "dropped-attribute bpmn:message@itemRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-attribute bpmn:serviceTask@operationRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-attribute bpmn:messageEventDefinition@messageRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
+      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Options are in #62"
+    },
+    "dropped-attribute bpmn:dataInput@itemSubjectRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
+      "note": "Flowable uses itemSubjectRef=\"xsd:string\" (and int, long, double, boolean, datetime, json) for typed data objects and properties without declaring an itemDefinition. bpmn-moddle drops it as unresolved. Options are in #62"
+    },
+    "dropped-attribute bpmn:sendTask@operationRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-attribute bpmn:association@targetRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-attribute bpmn:dataOutput@itemSubjectRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
+      "note": "Flowable uses itemSubjectRef=\"xsd:string\" (and int, long, double, boolean, datetime, json) for typed data objects and properties without declaring an itemDefinition. bpmn-moddle drops it as unresolved. Options are in #62"
+    },
+    "dropped-attribute bpmn:sequenceFlow@sourceRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-attribute bpmndi:BPMNEdge@bpmnElement": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-attribute bpmndi:BPMNShape@bpmnElement": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-attribute flowable:customResource@flowable:name": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/11",
+      "note": "Accepted: written as plain name, as Flowable's own exporter writes it (writeDefaultAttribute); Flowable's parser reads flowable:name and falls back to the unprefixed name (UserTaskXMLConverter, CustomIdentityLinkParser)"
+    },
+    "dropped-attribute bpmn:compensateEventDefinition@activityRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-attribute bpmn:sequenceFlow@targetRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-attribute bpmn:signalEventDefinition@signalRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
+      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Options are in #62"
+    },
+    "dropped-attribute flowable:collection@flowable:class": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/15",
+      "note": "Accepted: written unprefixed, as Flowable's own exporter writes it; Flowable reads these attributes with getAttributeValue(null, ...), which ignores the namespace (FlowableCollectionParser)"
+    },
+    "dropped-attribute flowable:collection@flowable:delegateExpression": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/15",
+      "note": "Accepted: written unprefixed, as Flowable's own exporter writes it; Flowable reads these attributes with getAttributeValue(null, ...), which ignores the namespace (FlowableCollectionParser)"
+    },
+    "dropped-attribute bpmn:escalationEventDefinition@escalationRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
+      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Options are in #62"
+    },
+    "dropped-attribute bpmn:association@sourceRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-attribute bpmn:boundaryEvent@attachedToRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-attribute bpmn:dataStore@itemSubjectRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-attribute bpmn:dataStoreReference@dataStoreRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-attribute bpmn:participant@processRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-attribute bpmn:property@itemSubjectRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
+      "note": "Flowable uses itemSubjectRef=\"xsd:string\" (and int, long, double, boolean, datetime, json) for typed data objects and properties without declaring an itemDefinition. bpmn-moddle drops it as unresolved. Options are in #62"
+    },
+    "dropped-attribute flowable:taskListener@flowable:expression": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/9",
+      "note": "Accepted: listener attributes are written unprefixed, as Flowable's exporter writes them; Flowable reads both (FlowableListenerParser)"
+    },
+    "dropped-attribute yourco:attribute@yourco:id": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
+      "note": "Accepted: the writer writes attributes of an unknown element's own namespace without a prefix; Flowable reads both. With the Activiti namespace migrated (#18) the activiti: elements are typed instead"
+    },
+    "dropped-attribute yourco:attribute@yourco:name": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
+      "note": "Accepted: the writer writes attributes of an unknown element's own namespace without a prefix; Flowable reads both. With the Activiti namespace migrated (#18) the activiti: elements are typed instead"
+    },
+    "dropped-attribute yourco:attribute@yourco:value": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
+      "note": "Accepted: the writer writes attributes of an unknown element's own namespace without a prefix; Flowable reads both. With the Activiti namespace migrated (#18) the activiti: elements are typed instead"
+    },
+    "dropped-attribute yourco:i18ln@yourco:labeledEntityIdForDescription": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
+      "note": "Accepted: the writer writes attributes of an unknown element's own namespace without a prefix; Flowable reads both. With the Activiti namespace migrated (#18) the activiti: elements are typed instead"
+    },
+    "dropped-attribute yourco:i18ln@yourco:labeledEntityIdForName": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
+      "note": "Accepted: the writer writes attributes of an unknown element's own namespace without a prefix; Flowable reads both. With the Activiti namespace migrated (#18) the activiti: elements are typed instead"
+    },
+    "dropped-attribute yourco:i18ln@yourco:resourceBundleKeyForDescription": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
+      "note": "Accepted: the writer writes attributes of an unknown element's own namespace without a prefix; Flowable reads both. With the Activiti namespace migrated (#18) the activiti: elements are typed instead"
+    },
+    "dropped-attribute yourco:i18ln@yourco:resourceBundleKeyForName": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
+      "note": "Accepted: the writer writes attributes of an unknown element's own namespace without a prefix; Flowable reads both. With the Activiti namespace migrated (#18) the activiti: elements are typed instead"
+    },
+    "dropped-attribute bpmn:dataStoreReference@itemSubjectRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
+    },
+    "dropped-attribute bpmn:sequenceFlow@skipExpression": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/17",
+      "note": "Accepted: an unprefixed skipExpression on a sequence flow (as Flowable's exporter writes it) now reads into the typed flowable:skipExpression and is written prefixed; Flowable reads it with getAttributeValue(null, ...), which ignores the namespace (SequenceFlowXMLConverter)"
+    },
+    "dropped-attribute bpmn:serviceTask@flowable:useLocalScopeForResultVariable": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/12",
+      "note": "Check when the service task attributes are typed"
+    },
+    "changed-attribute bpmn:conditionExpression@xsi:type": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: an unprefixed \"tFormalExpression\" is written as \"bpmn:tFormalExpression\", the same type"
+    },
+    "changed-attribute bpmn:callActivity@flowable:fallbackToDefaultTenant": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: an intentionally invalid Flowable test model (fallbackToDefaultTenant=\"${1}\"). Flowable stores the attribute as a Boolean parsed from the text and does not evaluate expressions, so the engine already sees false; the attribute is a boolean and is written as false"
+    },
+    "changed-attribute flowable:mapException@includeChildExceptions": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: an intentionally invalid Flowable test model (includeChildExceptions=\"NoTrueOrFalse\", which Flowable rejects with an XMLException); the attribute is a boolean and is written as false"
+    },
+    "added-attribute flowable:customResource@name": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/11",
+      "note": "Accepted: written as plain name, as Flowable's own exporter writes it (writeDefaultAttribute); Flowable's parser reads flowable:name and falls back to the unprefixed name (UserTaskXMLConverter, CustomIdentityLinkParser)"
+    },
+    "added-attribute flowable:collection@class": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/15",
+      "note": "Accepted: written unprefixed, as Flowable's own exporter writes it; Flowable reads these attributes with getAttributeValue(null, ...), which ignores the namespace (FlowableCollectionParser)"
+    },
+    "added-attribute flowable:collection@delegateExpression": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/15",
+      "note": "Accepted: written unprefixed, as Flowable's own exporter writes it; Flowable reads these attributes with getAttributeValue(null, ...), which ignores the namespace (FlowableCollectionParser)"
+    },
+    "added-attribute flowable:taskListener@expression": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/9",
+      "note": "Accepted: listener attributes are written unprefixed, as Flowable's exporter writes them; Flowable reads both (FlowableListenerParser)"
+    },
+    "added-attribute yourco:attribute@id": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
+      "note": "Accepted: the writer writes attributes of an unknown element's own namespace without a prefix; Flowable reads both. With the Activiti namespace migrated (#18) the activiti: elements are typed instead"
+    },
+    "added-attribute yourco:attribute@name": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
+      "note": "Accepted: the writer writes attributes of an unknown element's own namespace without a prefix; Flowable reads both. With the Activiti namespace migrated (#18) the activiti: elements are typed instead"
+    },
+    "added-attribute yourco:attribute@value": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
+      "note": "Accepted: the writer writes attributes of an unknown element's own namespace without a prefix; Flowable reads both. With the Activiti namespace migrated (#18) the activiti: elements are typed instead"
+    },
+    "added-attribute yourco:i18ln@labeledEntityIdForDescription": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
+      "note": "Accepted: the writer writes attributes of an unknown element's own namespace without a prefix; Flowable reads both. With the Activiti namespace migrated (#18) the activiti: elements are typed instead"
+    },
+    "added-attribute yourco:i18ln@labeledEntityIdForName": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
+      "note": "Accepted: the writer writes attributes of an unknown element's own namespace without a prefix; Flowable reads both. With the Activiti namespace migrated (#18) the activiti: elements are typed instead"
+    },
+    "added-attribute yourco:i18ln@resourceBundleKeyForDescription": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
+      "note": "Accepted: the writer writes attributes of an unknown element's own namespace without a prefix; Flowable reads both. With the Activiti namespace migrated (#18) the activiti: elements are typed instead"
+    },
+    "added-attribute yourco:i18ln@resourceBundleKeyForName": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
+      "note": "Accepted: the writer writes attributes of an unknown element's own namespace without a prefix; Flowable reads both. With the Activiti namespace migrated (#18) the activiti: elements are typed instead"
+    },
+    "added-attribute bpmn:sequenceFlow@flowable:skipExpression": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/17",
+      "note": "Accepted: an unprefixed skipExpression on a sequence flow (as Flowable's exporter writes it) now reads into the typed flowable:skipExpression and is written prefixed; Flowable reads it with getAttributeValue(null, ...), which ignores the namespace (SequenceFlowXMLConverter)"
+    }
+  }
+}

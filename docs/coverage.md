@@ -215,11 +215,11 @@ Inventory section Parsing rules, 13. Moddle: [#18](https://github.com/jylups/bpm
 
 | Extension | Kind | On | Moddle | Panel | Behaviors | Editor |
 |---|---|---|---|---|---|---|
-| activiti: and camunda: spellings of (F) attributes | attribute | everywhere | todo [#18](https://github.com/jylups/bpmn-js-env/issues/18) | – |  |  |
-| unprefixed attributes (listener, field, formProperty, in/out sub-attributes) | attribute | everywhere | todo [#18](https://github.com/jylups/bpmn-js-env/issues/18) | – |  |  |
-| camunda:asyncBefore / asyncAfter | attribute | flow nodes | todo [#18](https://github.com/jylups/bpmn-js-env/issues/18) | – |  |  |
-| type="external" (alias of external-worker) | attribute | service task | todo [#18](https://github.com/jylups/bpmn-js-env/issues/18) | – |  |  |
-| calledElementBinding="deployment" | attribute | call activity | todo [#18](https://github.com/jylups/bpmn-js-env/issues/18) | – |  |  |
+| activiti: and camunda: spellings of (F) attributes | attribute | everywhere | done ([jylups/flowable-bpmn-moddle#14](https://github.com/jylups/flowable-bpmn-moddle/pull/14)) | – |  |  |
+| unprefixed attributes (listener, field, formProperty, in/out sub-attributes) | attribute | everywhere | done ([jylups/flowable-bpmn-moddle#14](https://github.com/jylups/flowable-bpmn-moddle/pull/14)) | – |  |  |
+| camunda:asyncBefore / asyncAfter | attribute | flow nodes | done ([jylups/flowable-bpmn-moddle#14](https://github.com/jylups/flowable-bpmn-moddle/pull/14)) | – |  |  |
+| type="external" (alias of external-worker) | attribute | service task | done ([jylups/flowable-bpmn-moddle#14](https://github.com/jylups/flowable-bpmn-moddle/pull/14)) | – |  |  |
+| calledElementBinding="deployment" | attribute | call activity | done ([jylups/flowable-bpmn-moddle#14](https://github.com/jylups/flowable-bpmn-moddle/pull/14)) | – |  |  |
 
 ## Service task type fields
 
