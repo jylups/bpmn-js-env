@@ -8,10 +8,6 @@
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
       "note": "Accepted: an intentionally invalid Flowable test model (for example an illegal or duplicate ID, or an element BPMN does not define); bpmn-moddle reports it and drops it"
     },
-    "dropped-element bpmn:extensionElements > flowable:eventType": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/16",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:eventType> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
     "dropped-element bpmn:extensionElements > flowable:work-form-field-validation": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
       "note": "<flowable:work-form-field-validation> is not in the engine inventory (Flowable Work/Design or a test-only element). It must survive load and save once the flowable namespace has types: unknown flowable:* content has to be kept as generic content"
@@ -36,10 +32,6 @@
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
       "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
     },
-    "dropped-element bpmn:extensionElements > flowable:mapException": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/12",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:mapException> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
     "dropped-element bpmn:extensionElements > flowable:variableListenerEventDefinition": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/16",
       "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:variableListenerEventDefinition> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
@@ -48,29 +40,13 @@
       "issue": "https://github.com/jylups/bpmn-js-env/issues/16",
       "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:eventCorrelationParameter> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
     },
-    "dropped-element bpmn:extensionElements > flowable:eventOutParameter": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/16",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:eventOutParameter> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
-    "dropped-element bpmn:extensionElements > flowable:eventInParameter": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/12",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:eventInParameter> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
     "dropped-element bpmn:extensionElements > flowable:variableAggregation": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/15",
       "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:variableAggregation> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
     },
-    "dropped-element bpmn:extensionElements > flowable:channelKey": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/12",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:channelKey> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
     "dropped-element bpmn:extensionElements > flowable:startEventCorrelationConfiguration": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/16",
       "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:startEventCorrelationConfiguration> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
-    "dropped-element bpmn:extensionElements > flowable:httpRequestHandler": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/12",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:httpRequestHandler> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
     },
     "dropped-element bpmn:extensionElements > flowable:collection": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/15",
@@ -80,26 +56,6 @@
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
       "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
     },
-    "dropped-element bpmn:extensionElements > flowable:httpResponseHandler": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/12",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:httpResponseHandler> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
-    "dropped-element bpmn:extensionElements > flowable:triggerEventType": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/12",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:triggerEventType> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
-    "dropped-element bpmn:extensionElements > flowable:externalWorkerInParameter": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/12",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:externalWorkerInParameter> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
-    "dropped-element bpmn:extensionElements > flowable:externalWorkerOutParameter": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/12",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:externalWorkerOutParameter> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
-    "dropped-element bpmn:extensionElements > flowable:sendSynchronously": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/12",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:sendSynchronously> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
     "dropped-element bpmn:extensionElements > flowable:myTestEventDefinition": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
       "note": "<flowable:myTestEventDefinition> is not in the engine inventory (Flowable Work/Design or a test-only element). It must survive load and save once the flowable namespace has types: unknown flowable:* content has to be kept as generic content"
@@ -108,17 +64,9 @@
       "issue": "https://github.com/jylups/bpmn-js-env/issues/18",
       "note": "<flowable:static-process-key> is not in the engine inventory (Flowable Work/Design or a test-only element). It must survive load and save once the flowable namespace has types: unknown flowable:* content has to be kept as generic content"
     },
-    "dropped-element bpmn:extensionElements > flowable:systemChannel": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/12",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:systemChannel> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
-    },
     "dropped-element bpmn:process > bpmn:sequenceFlow": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
       "note": "Accepted: an intentionally invalid Flowable test model (for example an illegal or duplicate ID, or an element BPMN does not define); bpmn-moddle reports it and drops it"
-    },
-    "dropped-element bpmn:extensionElements > flowable:triggerEventCorrelationParameter": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/12",
-      "note": "Phase 1 gap: the flowable namespace is registered but has no type for <flowable:triggerEventCorrelationParameter> yet, so bpmn-moddle drops it. Fixed when the descriptor models it"
     },
     "dropped-element bpmn:dataInputAssociation > bpmn:sourceRef": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
@@ -347,6 +295,10 @@
     "added-attribute flowable:customResource@name": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/11",
       "note": "Accepted: written as plain name, as Flowable's own exporter writes it (writeDefaultAttribute); Flowable's parser reads flowable:name and falls back to the unprefixed name (UserTaskXMLConverter, CustomIdentityLinkParser)"
+    },
+    "changed-attribute flowable:mapException@includeChildExceptions": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
+      "note": "Accepted: an intentionally invalid Flowable test model (includeChildExceptions=\"NoTrueOrFalse\", which Flowable rejects with an XMLException); the attribute is a boolean and is written as false"
     }
   }
 }
