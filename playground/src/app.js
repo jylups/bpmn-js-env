@@ -9,7 +9,7 @@ import '@jylups/flowable-bpmn-js/assets/flowable-bpmn-js-touch.css';
 import 'bpmn-js-bpmnlint/dist/assets/css/bpmn-js-bpmnlint.css';
 import './styles.css';
 
-import { samples, emptyDiagram } from './samples.js';
+import { newDiagram, samples } from './samples.js';
 
 const STORAGE_KEY = 'bpmn-playground';
 
@@ -24,7 +24,7 @@ const statusEl = document.getElementById('status');
 
 const state = {
   mode: 'modeler',
-  xml: emptyDiagram,
+  xml: newDiagram(),
   source: { kind: 'sample', id: 'empty', fileName: 'diagram.bpmn' },
   tab: 'xml'
 };
@@ -318,10 +318,17 @@ sampleEl.addEventListener('change', () => {
 });
 
 document.getElementById('new').addEventListener('click', () => {
-  importXML(emptyDiagram, { kind: 'sample', id: 'empty', fileName: 'diagram.bpmn' });
+  importXML(newDiagram(), { kind: 'sample', id: 'empty', fileName: 'diagram.bpmn20.xml' });
 });
 
 document.getElementById('open').addEventListener('click', () => fileEl.click());
+
+// the editor's theme hooks: CSS custom properties for shape and label colors
+document.getElementById('dark').addEventListener('click', event => {
+  const dark = document.body.classList.toggle('dark-canvas');
+
+  event.currentTarget.setAttribute('aria-pressed', String(dark));
+});
 
 fileEl.addEventListener('change', () => {
   if (fileEl.files[0]) {
