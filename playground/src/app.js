@@ -1,20 +1,4 @@
-import Modeler from 'bpmn-js/lib/Modeler';
-import NavigatedViewer from 'bpmn-js/lib/NavigatedViewer';
-
-import {
-  BpmnPropertiesPanelModule,
-  BpmnPropertiesProviderModule
-} from 'bpmn-js-properties-panel';
-
-import flowableDescriptor, {
-  migrateActivitiXML,
-  registerUnknownFlowableElements,
-  useFlowablePrefix
-} from '@jylups/flowable-bpmn-moddle';
-
-import { FlowablePropertiesProviderModule } from '@jylups/bpmn-js-properties-panel-flowable';
-
-import { FlowableBehaviorsModule } from '@jylups/flowable-bpmn-js-behaviors';
+import { Modeler, NavigatedViewer } from '@jylups/flowable-bpmn-js';
 
 import 'bpmn-js/dist/assets/diagram-js.css';
 import 'bpmn-js/dist/assets/bpmn-js.css';
@@ -23,17 +7,6 @@ import '@bpmn-io/properties-panel/dist/assets/properties-panel.css';
 import './styles.css';
 
 import { samples, emptyDiagram } from './samples.js';
-
-const MODELER_MODULES = [
-  BpmnPropertiesPanelModule,
-  BpmnPropertiesProviderModule,
-  FlowablePropertiesProviderModule,
-  FlowableBehaviorsModule
-];
-
-const MODDLE_EXTENSIONS = {
-  flowable: flowableDescriptor
-};
 
 const STORAGE_KEY = 'bpmn-playground';
 
@@ -71,14 +44,12 @@ function createInstance(mode) {
   if (mode === 'modeler') {
     instance = new Modeler({
       container: canvasEl,
-      propertiesPanel: { parent: propertiesEl },
-      additionalModules: MODELER_MODULES,
-      moddleExtensions: MODDLE_EXTENSIONS
+      propertiesPanel: { parent: propertiesEl }
     });
 
     instance.on('commandStack.changed', scheduleExport);
   } else {
-    instance = new NavigatedViewer({ container: canvasEl, moddleExtensions: MODDLE_EXTENSIONS });
+    instance = new NavigatedViewer({ container: canvasEl });
   }
 
   return instance;
@@ -89,11 +60,8 @@ async function importXML(xml, source) {
 
   try {
 
-    // as an app imports Flowable models: Activiti spellings become flowable:,
-    // and flowable:* elements without a type are kept
-    xml = migrateActivitiXML(xml);
-    registerUnknownFlowableElements(instance.get('moddle'), xml);
-
+    // the editor reads Activiti spellings as flowable: and keeps flowable:*
+    // elements without a type (FlowableXMLModule)
     const { warnings } = await instance.importXML(xml);
 
     problems = warnings.map(toProblem);
@@ -138,8 +106,6 @@ function fitViewport() {
 
 async function exportXML() {
   try {
-    useFlowablePrefix(instance.getDefinitions());
-
     const { xml } = await instance.saveXML({ format: true });
 
     state.xml = xml;

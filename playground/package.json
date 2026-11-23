@@ -12,11 +12,8 @@
   },
   "dependencies": {
     "@bpmn-io/properties-panel": "^3.60.2",
-    "@jylups/bpmn-js-properties-panel-flowable": "*",
-    "@jylups/flowable-bpmn-js-behaviors": "^0.1.0",
-    "@jylups/flowable-bpmn-moddle": "^0.1.0",
-    "bpmn-js": "^18.33.1",
-    "bpmn-js-properties-panel": "^5.65.4"
+    "@jylups/flowable-bpmn-js": "*",
+    "bpmn-js": "^18.33.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
