@@ -6,6 +6,8 @@
 // Uses the local Chrome (Playwright channel "chrome"); set
 // PLAYWRIGHT_CHANNEL= to use Playwright's own Chromium instead.
 
+/* global document, window -- used in page.evaluate, which runs in the browser */
+
 import { mkdir, readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
