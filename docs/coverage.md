@@ -235,7 +235,7 @@ These are `field` children (section 5); the moddle covers them through `field`. 
 
 ## Behaviors that apply across rows
 
-- [ ] [#35](https://github.com/jylups/bpmn-js-env/issues/35): Clean up Flowable properties when an element's type is replaced (for example assignment when a user task becomes a service task, implementation when `type` changes)
+- [x] [#35](https://github.com/jylups/bpmn-js-env/issues/35): Clean up Flowable properties when an element's type is replaced (for example assignment when a user task becomes a service task, implementation when `type` changes) ([jylups/flowable-bpmn-js-behaviors#5](https://github.com/jylups/flowable-bpmn-js-behaviors/pull/5))
 - [x] [#36](https://github.com/jylups/bpmn-js-env/issues/36): Create `extensionElements` when needed; remove empty containers and lists ([jylups/flowable-bpmn-js-behaviors#4](https://github.com/jylups/flowable-bpmn-js-behaviors/pull/4))
 - [ ] [#37](https://github.com/jylups/bpmn-js-env/issues/37): Update error, signal and message references when IDs change; copy and paste Flowable properties
 
