@@ -1,10 +1,11 @@
-import { Modeler, NavigatedViewer } from '@jylups/flowable-bpmn-js';
+import { Modeler, NavigatedViewer, TouchModule } from '@jylups/flowable-bpmn-js';
 
 import 'bpmn-js/dist/assets/diagram-js.css';
 import 'bpmn-js/dist/assets/bpmn-js.css';
 import 'bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css';
 import '@bpmn-io/properties-panel/dist/assets/properties-panel.css';
 import '@jylups/flowable-bpmn-js/assets/flowable-bpmn-js.css';
+import '@jylups/flowable-bpmn-js/assets/flowable-bpmn-js-touch.css';
 import './styles.css';
 
 import { samples, emptyDiagram } from './samples.js';
@@ -45,7 +46,10 @@ function createInstance(mode) {
   if (mode === 'modeler') {
     instance = new Modeler({
       container: canvasEl,
-      propertiesPanel: { parent: propertiesEl }
+      propertiesPanel: { parent: propertiesEl },
+
+      // touch editing turns itself on only on touch screens
+      additionalModules: [ TouchModule ]
     });
 
     instance.on('commandStack.changed', scheduleExport);
