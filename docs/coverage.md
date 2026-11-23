@@ -23,8 +23,8 @@ Inventory section 1. Moddle: [#8](https://github.com/jylups/bpmn-js-env/issues/8
 | `element-name` | element | flow elements | done ([jylups/flowable-bpmn-moddle#4](https://github.com/jylups/flowable-bpmn-moddle/pull/4)) | done ([jylups/bpmn-js-properties-panel-flowable#3](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/3)) |  |  |
 | `jobCategory` | element | async activities, timers, external worker | done ([jylups/flowable-bpmn-moddle#4](https://github.com/jylups/flowable-bpmn-moddle/pull/4)) | done ([jylups/bpmn-js-properties-panel-flowable#3](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/3)) |  |  |
 | `includeInHistory` | element | flow elements | done ([jylups/flowable-bpmn-moddle#4](https://github.com/jylups/flowable-bpmn-moddle/pull/4)) | done ([jylups/bpmn-js-properties-panel-flowable#3](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/3)) |  |  |
-| localization (locale, name) | element | process, flow elements, data objects | done ([jylups/flowable-bpmn-moddle#4](https://github.com/jylups/flowable-bpmn-moddle/pull/4)) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
-| localization › documentation | child | localization | done ([jylups/flowable-bpmn-moddle#4](https://github.com/jylups/flowable-bpmn-moddle/pull/4)) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
+| localization (locale, name) | element | process, flow elements, data objects | done ([jylups/flowable-bpmn-moddle#4](https://github.com/jylups/flowable-bpmn-moddle/pull/4)) | done ([jylups/bpmn-js-properties-panel-flowable#12](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/12)) |  |  |
+| localization › documentation | child | localization | done ([jylups/flowable-bpmn-moddle#4](https://github.com/jylups/flowable-bpmn-moddle/pull/4)) | done ([jylups/bpmn-js-properties-panel-flowable#12](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/12)) |  |  |
 
 ## Listeners, fields and scripts
 
@@ -202,10 +202,10 @@ Inventory section 10. Moddle: [#17](https://github.com/jylups/bpmn-js-env/issues
 
 | Extension | Kind | On | Moddle | Panel | Behaviors | Editor |
 |---|---|---|---|---|---|---|
-| `value` | element | dataObject | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
-| itemSubjectRef types (string, int, long, double, boolean, datetime, json) | attribute | dataObject | done ([jylups/flowable-bpmn-moddle#16](https://github.com/jylups/flowable-bpmn-moddle/pull/16)) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
-| scope (global, processInstance) | attribute | signal | done ([jylups/flowable-bpmn-moddle#13](https://github.com/jylups/flowable-bpmn-moddle/pull/13)) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
-| skipExpression (written unprefixed) | attribute | sequence flow | done ([jylups/flowable-bpmn-moddle#13](https://github.com/jylups/flowable-bpmn-moddle/pull/13)) | todo [#31](https://github.com/jylups/bpmn-js-env/issues/31) |  |  |
+| `value` | element | dataObject | done ([jylups/flowable-bpmn-moddle#6](https://github.com/jylups/flowable-bpmn-moddle/pull/6)) | done ([jylups/bpmn-js-properties-panel-flowable#12](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/12)) |  |  |
+| itemSubjectRef types (string, int, long, double, boolean, datetime, json) | attribute | dataObject | done ([jylups/flowable-bpmn-moddle#16](https://github.com/jylups/flowable-bpmn-moddle/pull/16)) | done ([jylups/bpmn-js-properties-panel-flowable#12](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/12)) |  |  |
+| scope (global, processInstance) | attribute | signal | done ([jylups/flowable-bpmn-moddle#13](https://github.com/jylups/flowable-bpmn-moddle/pull/13)) | done ([jylups/bpmn-js-properties-panel-flowable#12](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/12)) |  |  |
+| skipExpression (written unprefixed) | attribute | sequence flow | done ([jylups/flowable-bpmn-moddle#13](https://github.com/jylups/flowable-bpmn-moddle/pull/13)) | done ([jylups/bpmn-js-properties-panel-flowable#12](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/12)) |  |  |
 | sourceDockerX/Y, targetDockerX/Y | attribute | bpmndi:BPMNEdge | kept as unknown attributes (lossless; typing them renames the DI tags) | – |  | – |
 | `rotation` | attribute | bpmndi:BPMNLabel | kept as unknown attributes (lossless; typing them renames the DI tags) | – |  | – |
 
