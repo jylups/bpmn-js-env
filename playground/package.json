@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@bpmn-io/properties-panel": "^3.60.2",
-    "@jylups/flowable-bpmn-js": "*",
+    "@jylups/flowable-bpmn-js": "^0.1.0",
     "bpmn-js": "^18.33.1",
     "bpmn-js-bpmnlint": "^0.25.0"
   },
