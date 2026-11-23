@@ -39,7 +39,7 @@ All packages use the `@jylups/` scope: the unscoped names are taken on npm by ot
 - First the extensions the open-source Flowable engine reads, as listed in [docs/flowable-bpmn-extensions.md](docs/flowable-bpmn-extensions.md). That inventory comes from flowable/flowable-engine `main` at 64d64909.
 - Flowable Work/Design-only properties come in a later phase.
 - Read `activiti:` spellings by importing through `migrateActivitiXML` and `useFlowablePrefix` from `@jylups/flowable-bpmn-moddle`; they are then written as `flowable:`. The few `camunda:` spellings Flowable accepts (3 corpus models) stay generic content.
-- Import models through `registerUnknownFlowableElements` (keeps unknown `flowable:*` elements). References by code or name are kept by creating the missing definitions on import in the behaviors package (#67, decided in #62).
+- Import models through `registerUnknownFlowableElements` (keeps unknown `flowable:*` elements). References by code or name are kept by creating the missing definitions on import: `FlowableBehaviorsModule` does it in bpmn-js, and `createMissingDefinitions` from the behaviors package on a plain moddle import, as the roundtrip report does (#67, decided in #62).
 - [docs/coverage.md](docs/coverage.md) tracks which package covers each extension. A pull request that adds coverage updates the rows it touches in the same change.
 - The load-and-save report ([roundtrip/README.md](roundtrip/README.md)) runs over the Flowable engine's 3,265 BPMN models in CI. A pull request that fixes a known difference removes it from `roundtrip/known-losses.json`; a new kind of difference fails CI until it is fixed or listed with its issue.
 
