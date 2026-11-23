@@ -70,7 +70,8 @@ All packages use the `@jylups/` scope: the unscoped names are taken on npm by ot
   1. The maintainer publishes version 0.0.0 once from their own machine with Node 26 (`npm publish --access public` in the package folder). npm may handle this as a staged publish: it first creates a `0.0.0-stage` placeholder, and 0.0.0 appears once the maintainer approves it (2FA).
   2. Add the trusted publisher, either with the CLI (`npm trust github @jylups/<repo> --file publish.yml --repo jylups/<repo> --allow-publish --allow-stage-publish --yes`) or on npmjs.com (package settings, GitHub Actions: user `jylups`, repository `<repo>`, workflow `publish.yml`, no environment). Check it with `npm trust list @jylups/<repo>`.
   3. Release a prerelease through GitHub within 2 days, and verify it with `npm view @jylups/<repo> dist-tags` and `npm audit signatures`. npm can take a minute or two to list a new version.
-- Trusted publishing is set up for `@jylups/flowable-bpmn-moddle` (first CI release: 0.0.1-next.0) and `@jylups/bpmn-js-properties-panel-flowable` (first CI release: 0.1.0-next.0). The other packages get it before their first release.
+- Trusted publishing is set up for `@jylups/flowable-bpmn-moddle` (first CI release: 0.0.1-next.0), `@jylups/bpmn-js-properties-panel-flowable` (first CI release: 0.1.0-next.0) and `@jylups/flowable-bpmn-js-behaviors` (first CI release: 0.1.0-next.0). `@jylups/flowable-bpmn-js` gets it before its first release.
+- The first manual publish fails with a misleading `404 Not Found` when npm isn't logged in; check `npm whoami` and run `npm login` first.
 - `npm trust` needs npm 11 (Node 26); with an older default Node, run `nvm use` in the workspace first.
 - Main branches are protected by a "Main Branch" ruleset (no deletion, no force push); normal pull request merges need no bypass.
 
