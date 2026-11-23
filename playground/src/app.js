@@ -14,6 +14,8 @@ import flowableDescriptor, {
 
 import { FlowablePropertiesProviderModule } from '@jylups/bpmn-js-properties-panel-flowable';
 
+import { FlowableBehaviorsModule } from '@jylups/flowable-bpmn-js-behaviors';
+
 import 'bpmn-js/dist/assets/diagram-js.css';
 import 'bpmn-js/dist/assets/bpmn-js.css';
 import 'bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css';
@@ -22,14 +24,11 @@ import './styles.css';
 
 import { samples, emptyDiagram } from './samples.js';
 
-/*
- * The Flowable behaviors (jylups/bpmn-js-env#33) are added here when that
- * package has its first modules.
- */
 const MODELER_MODULES = [
   BpmnPropertiesPanelModule,
   BpmnPropertiesProviderModule,
-  FlowablePropertiesProviderModule
+  FlowablePropertiesProviderModule,
+  FlowableBehaviorsModule
 ];
 
 const MODDLE_EXTENSIONS = {
