@@ -49,6 +49,7 @@ All packages use the `@jylups/` scope: the unscoped names are taken on npm by ot
 - Bundle work into as few pull requests as possible. Make a separate pull request only when another repository or a release has to come first.
 - Pull requests are opened and merged without waiting for a review; report each pull request link and what was merged in the issue.
 - A change to a package usually comes with a bpmn-js-env change (coverage, baselines). Land them in that order with `scripts/land-prs.sh <package-repo> <package-pr> <branch> <title> <body-file>`: it merges the package PR after its CI, then opens and merges the bpmn-js-env PR after its CI, and can be run again after an interruption.
+- The properties panel README screenshots come from the running playground (`npm run dev`): `node scripts/panel-screenshots.js` writes them to `bpmn-js-properties-panel-flowable/docs/screenshots`. It uses the local Chrome; set `PLAYWRIGHT_CHANNEL=` for Playwright's Chromium.
 - No AI tool, model or vendor attribution anywhere: commits (no co-author trailers), pull requests, issues, comments or docs.
 
 ## Packages and tests
