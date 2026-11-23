@@ -54,4 +54,4 @@ The playground (Vite) loads bpmn-js with the bpmn.io properties panel:
 - Download of the current XML. The state is kept in session storage across reloads.
 - `window.bpmnPlayground` gives access to the current instance, the problems, `importXML(xml)` and `exportXML()` from the browser console.
 
-The playground uses the workspace's Flowable moddle descriptor, properties provider and modeling behaviors, and imports models the way an app should: through `migrateActivitiXML` and `registerUnknownFlowableElements` before import, and `useFlowablePrefix` before saving.
+The playground uses the editor package (`@jylups/flowable-bpmn-js`) from the workspace: its `Modeler` and `NavigatedViewer` bring the Flowable moddle descriptor, properties provider and modeling behaviors, and read and write models as Flowable needs them (Activiti spellings, unknown `flowable:*` elements, references by code or name, the `flowable` prefix).
