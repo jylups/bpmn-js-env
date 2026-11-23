@@ -45,8 +45,8 @@
       "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
     },
     "dropped-attribute bpmn:errorEventDefinition@errorRef": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
-      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Options are in #62"
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/67",
+      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Decided in #62: the behaviors package creates the missing definitions on import (#67)"
     },
     "dropped-attribute di:waypoint@xsi:type": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
@@ -61,8 +61,8 @@
       "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
     },
     "dropped-attribute bpmn:messageEventDefinition@messageRef": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
-      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Options are in #62"
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/67",
+      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Decided in #62: the behaviors package creates the missing definitions on import (#67)"
     },
     "dropped-attribute bpmn:sendTask@operationRef": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
@@ -97,8 +97,8 @@
       "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
     },
     "dropped-attribute bpmn:signalEventDefinition@signalRef": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
-      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Options are in #62"
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/67",
+      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Decided in #62: the behaviors package creates the missing definitions on import (#67)"
     },
     "dropped-attribute flowable:collection@flowable:class": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/15",
@@ -109,8 +109,8 @@
       "note": "Accepted: written unprefixed, as Flowable's own exporter writes it; Flowable reads these attributes with getAttributeValue(null, ...), which ignores the namespace (FlowableCollectionParser)"
     },
     "dropped-attribute bpmn:escalationEventDefinition@escalationRef": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/62",
-      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Options are in #62"
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/67",
+      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Decided in #62: the behaviors package creates the missing definitions on import (#67)"
     },
     "dropped-attribute bpmn:association@sourceRef": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
