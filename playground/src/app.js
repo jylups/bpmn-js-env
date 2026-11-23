@@ -4,6 +4,7 @@ import 'bpmn-js/dist/assets/diagram-js.css';
 import 'bpmn-js/dist/assets/bpmn-js.css';
 import 'bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css';
 import '@bpmn-io/properties-panel/dist/assets/properties-panel.css';
+import '@jylups/flowable-bpmn-js/assets/flowable-bpmn-js.css';
 import './styles.css';
 
 import { samples, emptyDiagram } from './samples.js';
