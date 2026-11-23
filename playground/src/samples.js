@@ -1,4 +1,5 @@
-import emptyXML from './diagrams/empty.bpmn?raw';
+import { createNewDiagramXML } from '@jylups/flowable-bpmn-js';
+
 import flowableBasicsXML from './diagrams/flowable-basics.bpmn20.xml?raw';
 
 /**
@@ -14,9 +15,14 @@ export const samples = [
   {
     id: 'empty',
     name: 'Empty process',
-    fileName: 'diagram.bpmn',
-    xml: emptyXML
+    fileName: 'diagram.bpmn20.xml',
+    xml: createNewDiagramXML({ processId: 'Process_1' })
   }
 ];
 
-export const emptyDiagram = emptyXML;
+/**
+ * A new process, from the editor's template, with its own process key.
+ */
+export function newDiagram() {
+  return createNewDiagramXML();
+}

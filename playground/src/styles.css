@@ -86,7 +86,8 @@ select:hover {
   margin-left: -1px;
 }
 
-.mode button[aria-pressed="true"] {
+.mode button[aria-pressed="true"],
+#dark[aria-pressed="true"] {
   background: var(--accent);
   border-color: var(--accent);
   color: #fff;
@@ -235,4 +236,13 @@ textarea.pane {
     border-left: none;
     border-top: 1px solid var(--border);
   }
+}
+
+/* the editor's theme hooks (Dark canvas button) */
+.dark-canvas #canvas {
+  background: #1e2026;
+  --flowable-shape-fill: #2a2d35;
+  --flowable-shape-stroke: #d8dbe2;
+  --flowable-label-color: #f0f1f4;
+  --flowable-watermark-color: #c8cad0;
 }
