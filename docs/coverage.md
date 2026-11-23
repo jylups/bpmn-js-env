@@ -241,6 +241,6 @@ These are `field` children (section 5); the moddle covers them through `field`. 
 
 ## Editor work that applies across rows
 
-- [ ] [#41](https://github.com/jylups/bpmn-js-env/issues/41): Palette and replace menu entries for the typed service tasks (mail, http, shell, camel, dmn, case, send-event, external-worker)
+- [x] [#41](https://github.com/jylups/bpmn-js-env/issues/41): Palette and replace menu entries for the typed service tasks (mail, http, shell, camel, dmn, case, send-event, external-worker) ([jylups/flowable-bpmn-js#4](https://github.com/jylups/flowable-bpmn-js/pull/4))
 - [ ] [#42](https://github.com/jylups/bpmn-js-env/issues/42): Renderer icons for the typed service tasks
 - [ ] [#44](https://github.com/jylups/bpmn-js-env/issues/44): Lint rules: missing service task implementation, invalid durations (due date, timers, retry cycle), missing called element
