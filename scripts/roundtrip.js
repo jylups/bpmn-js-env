@@ -40,6 +40,7 @@ import { BpmnModdle } from 'bpmn-moddle';
 
 import { migrateActivitiXML, useFlowablePrefix } from '../flowable-bpmn-moddle/lib/migrate.js';
 import { registerUnknownFlowableElements } from '../flowable-bpmn-moddle/lib/unknown.js';
+import { createMissingDefinitions } from '../flowable-bpmn-js-behaviors/lib/util/MissingDefinitions.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -203,6 +204,10 @@ async function roundtrip(xml) {
   } catch (error) {
     return { error: error.message, warnings: (error.warnings || []).map(w => w.message) };
   }
+
+  // create the error, message, signal and escalation definitions that
+  // references by code or name stand for, as the editor's behaviors do (#67)
+  createMissingDefinitions(imported.rootElement, imported);
 
   const warnings = imported.warnings.map(w => w.message);
 

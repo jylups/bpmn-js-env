@@ -44,10 +44,6 @@
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
       "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
     },
-    "dropped-attribute bpmn:errorEventDefinition@errorRef": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/67",
-      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Decided in #62: the behaviors package creates the missing definitions on import (#67)"
-    },
     "dropped-attribute di:waypoint@xsi:type": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
       "note": "Accepted: an xsi:type annotation (omgdc:Point) on waypoints that carries no information"
@@ -59,10 +55,6 @@
     "dropped-attribute bpmn:serviceTask@operationRef": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
       "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
-    },
-    "dropped-attribute bpmn:messageEventDefinition@messageRef": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/67",
-      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Decided in #62: the behaviors package creates the missing definitions on import (#67)"
     },
     "dropped-attribute bpmn:sendTask@operationRef": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
@@ -96,10 +88,6 @@
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
       "note": "Accepted: the reference points at an ID that no element in the file has; bpmn-moddle reports an unresolved reference and drops it on save"
     },
-    "dropped-attribute bpmn:signalEventDefinition@signalRef": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/67",
-      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Decided in #62: the behaviors package creates the missing definitions on import (#67)"
-    },
     "dropped-attribute flowable:collection@flowable:class": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/15",
       "note": "Accepted: written unprefixed, as Flowable's own exporter writes it; Flowable reads these attributes with getAttributeValue(null, ...), which ignores the namespace (FlowableCollectionParser)"
@@ -107,10 +95,6 @@
     "dropped-attribute flowable:collection@flowable:delegateExpression": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/15",
       "note": "Accepted: written unprefixed, as Flowable's own exporter writes it; Flowable reads these attributes with getAttributeValue(null, ...), which ignores the namespace (FlowableCollectionParser)"
-    },
-    "dropped-attribute bpmn:escalationEventDefinition@escalationRef": {
-      "issue": "https://github.com/jylups/bpmn-js-env/issues/67",
-      "note": "Flowable accepts a reference without a matching element (an error code, or a message, signal or escalation name). bpmn-moddle drops it as unresolved. Decided in #62: the behaviors package creates the missing definitions on import (#67)"
     },
     "dropped-attribute bpmn:association@sourceRef": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/6",
@@ -227,6 +211,34 @@
     "added-attribute bpmn:sequenceFlow@flowable:skipExpression": {
       "issue": "https://github.com/jylups/bpmn-js-env/issues/17",
       "note": "Accepted: an unprefixed skipExpression on a sequence flow (as Flowable's exporter writes it) now reads into the typed flowable:skipExpression and is written prefixed; Flowable reads it with getAttributeValue(null, ...), which ignores the namespace (SequenceFlowXMLConverter)"
+    },
+    "added-element bpmn:definitions > bpmn:error": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/67",
+      "note": "Expected: a reference by code or name gets the definition Flowable reads it as (createMissingDefinitions in the behaviors package, #67): <error errorCode>, <message name>, <signal name> or <escalation escalationCode>, with the value as its ID when that is a valid, unused ID. The saved reference keeps its Flowable meaning"
+    },
+    "added-element bpmn:definitions > bpmn:message": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/67",
+      "note": "Expected: a reference by code or name gets the definition Flowable reads it as (createMissingDefinitions in the behaviors package, #67): <error errorCode>, <message name>, <signal name> or <escalation escalationCode>, with the value as its ID when that is a valid, unused ID. The saved reference keeps its Flowable meaning"
+    },
+    "added-element bpmn:definitions > bpmn:signal": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/67",
+      "note": "Expected: a reference by code or name gets the definition Flowable reads it as (createMissingDefinitions in the behaviors package, #67): <error errorCode>, <message name>, <signal name> or <escalation escalationCode>, with the value as its ID when that is a valid, unused ID. The saved reference keeps its Flowable meaning"
+    },
+    "added-element bpmn:definitions > bpmn:escalation": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/67",
+      "note": "Expected: a reference by code or name gets the definition Flowable reads it as (createMissingDefinitions in the behaviors package, #67): <error errorCode>, <message name>, <signal name> or <escalation escalationCode>, with the value as its ID when that is a valid, unused ID. The saved reference keeps its Flowable meaning"
+    },
+    "changed-attribute bpmn:errorEventDefinition@errorRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/67",
+      "note": "Expected (#67): the reference now points at the existing error with that error code (errorRef=\"myErrorCode1\" becomes the ID of <error errorCode=\"myErrorCode1\">), or at a created error whose ID had to be generated. Flowable reads the same error code"
+    },
+    "changed-attribute bpmn:messageEventDefinition@messageRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/67",
+      "note": "Expected (#67): a name qualified with the target namespace (messageRef=\"tns:newInvoice\") is written as the ID it stands for (newInvoice), as Flowable resolves it; other references point at the existing or created message with that name"
+    },
+    "changed-attribute bpmn:signalEventDefinition@signalRef": {
+      "issue": "https://github.com/jylups/bpmn-js-env/issues/67",
+      "note": "Expected (#67): the reference points at a created signal whose ID had to be generated because the name is already an ID (Signal_notValid for signalRef=\"notValid\" in an intentionally invalid model). Flowable reads the same signal name"
     }
   }
 }
