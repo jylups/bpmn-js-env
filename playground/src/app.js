@@ -6,6 +6,14 @@ import {
   BpmnPropertiesProviderModule
 } from 'bpmn-js-properties-panel';
 
+import flowableDescriptor, {
+  migrateActivitiXML,
+  registerUnknownFlowableElements,
+  useFlowablePrefix
+} from '@jylups/flowable-bpmn-moddle';
+
+import { FlowablePropertiesProviderModule } from '@jylups/bpmn-js-properties-panel-flowable';
+
 import 'bpmn-js/dist/assets/diagram-js.css';
 import 'bpmn-js/dist/assets/bpmn-js.css';
 import 'bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css';
@@ -15,14 +23,18 @@ import './styles.css';
 import { samples, emptyDiagram } from './samples.js';
 
 /*
- * The Flowable modules (moddle descriptor, properties provider, behaviors)
- * are added here as the workspace packages become available
- * (jylups/bpmn-js-env#7, #20, #33).
+ * The Flowable behaviors (jylups/bpmn-js-env#33) are added here when that
+ * package has its first modules.
  */
 const MODELER_MODULES = [
   BpmnPropertiesPanelModule,
-  BpmnPropertiesProviderModule
+  BpmnPropertiesProviderModule,
+  FlowablePropertiesProviderModule
 ];
+
+const MODDLE_EXTENSIONS = {
+  flowable: flowableDescriptor
+};
 
 const STORAGE_KEY = 'bpmn-playground';
 
@@ -61,12 +73,13 @@ function createInstance(mode) {
     instance = new Modeler({
       container: canvasEl,
       propertiesPanel: { parent: propertiesEl },
-      additionalModules: MODELER_MODULES
+      additionalModules: MODELER_MODULES,
+      moddleExtensions: MODDLE_EXTENSIONS
     });
 
     instance.on('commandStack.changed', scheduleExport);
   } else {
-    instance = new NavigatedViewer({ container: canvasEl });
+    instance = new NavigatedViewer({ container: canvasEl, moddleExtensions: MODDLE_EXTENSIONS });
   }
 
   return instance;
@@ -76,6 +89,12 @@ async function importXML(xml, source) {
   problems = [];
 
   try {
+
+    // as an app imports Flowable models: Activiti spellings become flowable:,
+    // and flowable:* elements without a type are kept
+    xml = migrateActivitiXML(xml);
+    registerUnknownFlowableElements(instance.get('moddle'), xml);
+
     const { warnings } = await instance.importXML(xml);
 
     problems = warnings.map(toProblem);
@@ -102,6 +121,12 @@ async function importXML(xml, source) {
 function fitViewport() {
   requestAnimationFrame(() => {
     const canvas = instance.get('canvas');
+    const { width, height } = canvas.getSize();
+
+    // a hidden or not yet laid out canvas has no size to fit into
+    if (!width || !height) {
+      return;
+    }
 
     canvas.zoom('fit-viewport', 'auto');
 
@@ -114,6 +139,8 @@ function fitViewport() {
 
 async function exportXML() {
   try {
+    useFlowablePrefix(instance.getDefinitions());
+
     const { xml } = await instance.saveXML({ format: true });
 
     state.xml = xml;
