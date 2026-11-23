@@ -30,18 +30,22 @@ ENV_REPO=$OWNER/bpmn-js-env
 
 cd "$(dirname "$0")/.."
 
-# waits for the latest CI run on a branch and returns its success
+# waits for the CI run of the branch's current head commit and returns its
+# success (an older run of the same branch does not count)
 wait_ci() {
-  local repo=$1 branch=$2 run=""
+  local repo=$1 branch=$2 run="" sha
 
-  for _ in $(seq 1 40); do
-    run=$(gh run list --repo "$repo" --branch "$branch" --workflow ci.yml --limit 1 --json databaseId --jq '.[0].databaseId // empty')
+  sha=$(gh api "repos/$repo/branches/$branch" --jq .commit.sha 2>/dev/null)
+
+  for _ in $(seq 1 60); do
+    run=$(gh run list --repo "$repo" --branch "$branch" --workflow ci.yml --limit 10 \
+      --json databaseId,headSha --jq "map(select(.headSha == \"$sha\")) | .[0].databaseId // empty")
     [ -n "$run" ] && break
     sleep 3
   done
 
   if [ -z "$run" ]; then
-    echo "no CI run found for $repo $branch"
+    echo "no CI run found for $repo $branch at ${sha:0:7}"
     return 1
   fi
 
