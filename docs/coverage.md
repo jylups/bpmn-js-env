@@ -128,15 +128,15 @@ Inventory section 6, 7, 8. Moddle: [#13](https://github.com/jylups/bpmn-js-env/i
 
 | Extension | Kind | On | Moddle | Panel | Behaviors | Editor |
 |---|---|---|---|---|---|---|
-| resultVariable (alias resultVariableName) | attribute | script task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
-| `autoStoreVariables` | attribute | script task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
-| `doNotIncludeVariables` | attribute | script task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
-| `skipExpression` | attribute | script task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
-| in (script task) | element | script task | done ([jylups/flowable-bpmn-moddle#10](https://github.com/jylups/flowable-bpmn-moddle/pull/10)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
-| ruleVariablesInput, rules, resultVariable, class, exclude | attribute | business rule task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
-| type + field (mail, camel, dmn) | attribute | send task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
-| `skipExpression` | attribute | receive task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
-| eventType and event registry elements | element | receive task | done ([jylups/flowable-bpmn-moddle#12](https://github.com/jylups/flowable-bpmn-moddle/pull/12)) | todo [#27](https://github.com/jylups/bpmn-js-env/issues/27) |  |  |
+| resultVariable (alias resultVariableName) | attribute | script task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | done ([jylups/bpmn-js-properties-panel-flowable#8](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/8)) |  |  |
+| `autoStoreVariables` | attribute | script task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | done ([jylups/bpmn-js-properties-panel-flowable#8](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/8)) |  |  |
+| `doNotIncludeVariables` | attribute | script task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | done ([jylups/bpmn-js-properties-panel-flowable#8](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/8)) |  |  |
+| `skipExpression` | attribute | script task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | done ([jylups/bpmn-js-properties-panel-flowable#8](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/8)) |  |  |
+| in (script task) | element | script task | done ([jylups/flowable-bpmn-moddle#10](https://github.com/jylups/flowable-bpmn-moddle/pull/10)) | todo [#28](https://github.com/jylups/bpmn-js-env/issues/28) |  |  |
+| ruleVariablesInput, rules, resultVariable, class, exclude | attribute | business rule task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | done ([jylups/bpmn-js-properties-panel-flowable#8](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/8)) |  |  |
+| type + field (mail, camel, dmn) | attribute | send task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | done ([jylups/bpmn-js-properties-panel-flowable#8](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/8)) |  |  |
+| `skipExpression` | attribute | receive task | done ([jylups/flowable-bpmn-moddle#9](https://github.com/jylups/flowable-bpmn-moddle/pull/9)) | done ([jylups/bpmn-js-properties-panel-flowable#8](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/8)) |  |  |
+| eventType and event registry elements | element | receive task | done ([jylups/flowable-bpmn-moddle#12](https://github.com/jylups/flowable-bpmn-moddle/pull/12)) | done ([jylups/bpmn-js-properties-panel-flowable#8](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/8)) |  |  |
 
 ## Call activity
 
