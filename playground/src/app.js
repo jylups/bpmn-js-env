@@ -6,6 +6,7 @@ import 'bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css';
 import '@bpmn-io/properties-panel/dist/assets/properties-panel.css';
 import '@jylups/flowable-bpmn-js/assets/flowable-bpmn-js.css';
 import '@jylups/flowable-bpmn-js/assets/flowable-bpmn-js-touch.css';
+import 'bpmn-js-bpmnlint/dist/assets/css/bpmn-js-bpmnlint.css';
 import './styles.css';
 
 import { samples, emptyDiagram } from './samples.js';
@@ -30,6 +31,7 @@ const state = {
 
 let instance = null;
 let problems = [];
+let lintProblems = [];
 let exportTimer = null;
 
 
@@ -39,6 +41,8 @@ function createInstance(mode) {
   if (instance) {
     instance.destroy();
   }
+
+  lintProblems = [];
 
   propertiesEl.innerHTML = '';
   document.body.classList.toggle('modeler', mode === 'modeler');
@@ -53,6 +57,13 @@ function createInstance(mode) {
     });
 
     instance.on('commandStack.changed', scheduleExport);
+
+    // the editor lints with the Flowable rules; list the issues with the
+    // import warnings
+    instance.on('linting.completed', ({ issues }) => {
+      lintProblems = toLintProblems(issues);
+      renderProblems();
+    });
   } else {
     instance = new NavigatedViewer({ container: canvasEl });
   }
@@ -156,18 +167,31 @@ function toProblem(warning) {
   };
 }
 
-function renderProblems() {
-  problemsEl.innerHTML = '';
-  problemCountEl.textContent = problems.length ? `(${problems.length})` : '';
+/**
+ * Lint issues ({ elementId: [ { message, category, rule } ] }) as problems.
+ */
+function toLintProblems(issues) {
+  return Object.entries(issues).flatMap(([ elementId, elementIssues ]) => elementIssues.map(issue => ({
+    severity: issue.category === 'error' ? 'error' : 'warning',
+    message: `${issue.message} (${issue.rule})`,
+    elementId
+  })));
+}
 
-  if (!problems.length) {
-    problemsEl.textContent = 'No problems found while importing.';
+function renderProblems() {
+  const all = [ ...problems, ...lintProblems ];
+
+  problemsEl.innerHTML = '';
+  problemCountEl.textContent = all.length ? `(${all.length})` : '';
+
+  if (!all.length) {
+    problemsEl.textContent = 'No problems found.';
     return;
   }
 
   const list = document.createElement('ul');
 
-  problems.forEach(problem => {
+  all.forEach(problem => {
     const item = document.createElement('li');
 
     item.className = problem.severity;
@@ -357,7 +381,7 @@ window.bpmnPlayground = {
     return instance;
   },
   get problems() {
-    return problems;
+    return [ ...problems, ...lintProblems ];
   },
   importXML: xml => importXML(xml, { kind: 'file', fileName: 'diagram.bpmn' }),
   exportXML
