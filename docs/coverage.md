@@ -206,7 +206,8 @@ Inventory section 10. Moddle: [#17](https://github.com/jylups/bpmn-js-env/issues
 | itemSubjectRef types (string, int, long, double, boolean, datetime, json) | attribute | dataObject | done ([jylups/flowable-bpmn-moddle#16](https://github.com/jylups/flowable-bpmn-moddle/pull/16)) | done ([jylups/bpmn-js-properties-panel-flowable#12](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/12)) |  |  |
 | scope (global, processInstance) | attribute | signal | done ([jylups/flowable-bpmn-moddle#13](https://github.com/jylups/flowable-bpmn-moddle/pull/13)) | done ([jylups/bpmn-js-properties-panel-flowable#12](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/12)) |  |  |
 | skipExpression (written unprefixed) | attribute | sequence flow | done ([jylups/flowable-bpmn-moddle#13](https://github.com/jylups/flowable-bpmn-moddle/pull/13)) | done ([jylups/bpmn-js-properties-panel-flowable#12](https://github.com/jylups/bpmn-js-properties-panel-flowable/pull/12)) |  |  |
-| sourceDockerX/Y, targetDockerX/Y | attribute | bpmndi:BPMNEdge | kept as unknown attributes (lossless; typing them renames the DI tags) | – |  | – |
+| sourceDockerX/Y, targetDockerX/Y | attribute | bpmndi:BPMNEdge | done, as text on di:LabeledEdge so the tag stays BPMNEdge ([jylups/flowable-bpmn-moddle#18](https://github.com/jylups/flowable-bpmn-moddle/pull/18)) | – |  | – |
+| `condition` builder, Flowable Design only (group, match, targetAttribute, source*/target* attributes, nested conditions) | element | sequence flow | done ([jylups/flowable-bpmn-moddle#18](https://github.com/jylups/flowable-bpmn-moddle/pull/18)) | – |  | – |
 | `rotation` | attribute | bpmndi:BPMNLabel | kept as unknown attributes (lossless; typing them renames the DI tags) | – |  | – |
 
 ## Aliases and legacy forms
